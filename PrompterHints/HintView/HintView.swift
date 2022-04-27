@@ -13,7 +13,7 @@ struct HintView: View {
 
   private var textView: some View {
     TextView { textView in
-      textView.text = viewModel.textViewText
+      textView.text = viewModel.text
       textView.showsVerticalScrollIndicator = false
       viewModel.makeFirstResponderIfNeeded(textView)
     }

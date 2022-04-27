@@ -27,7 +27,7 @@ struct ListView: View {
   }
 
   private func makeCell(for hint: HintModel) -> some View {
-    ListViewCell(model: hint)
+    ListViewCell(model: .init(from: hint))
       .dropShadow()
       .padding(.horizontal)
       .padding(.vertical, .s1)
@@ -36,7 +36,6 @@ struct ListView: View {
   private func makeDestination(for hint: HintModel) -> some View {
     HintView(viewModel: .init(
       mode: .edit,
-      title: hint.title,
       text: hint.text
     ))
   }

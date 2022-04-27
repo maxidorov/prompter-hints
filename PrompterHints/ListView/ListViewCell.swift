@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ListViewCell: View {
-  let model: HintModel
+  let model: ListViewCellModel
 
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
         Text(model.title)
+          .fontWeight(.bold)
+
         Spacer()
+
         Text("\(model.date)".prefix(10))
+          .foregroundColor(.gray)
       }
 
       Spacer()
 
-      Text(model.text)
+      Text(model.subtitle)
         .lineLimit(2)
 
       Spacer()
@@ -33,7 +37,7 @@ struct ListViewCell: View {
 
 struct ListViewCell_Previews: PreviewProvider {
   static var previews: some View {
-    ListViewCell(model: .mock)
+    ListViewCell(model: .init(from: .mock))
       .previewLayout(.fixed(width: 300, height: 80))
   }
 }

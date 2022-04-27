@@ -10,20 +10,13 @@ import UIKit
 
 final class HintViewModel: ObservableObject {
   @Published var mode: HintViewMode
-  @Published var title: String
   @Published var text: String
-
-  var textViewText: String {
-    [title, text].joined(separator: "\n")
-  }
 
   init(
     mode: HintViewMode,
-    title: String = "",
     text: String = ""
   ) {
     self.mode = mode
-    self.title = title
     self.text = text
   }
 

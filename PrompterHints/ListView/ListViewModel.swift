@@ -20,7 +20,6 @@ extension ListViewModel {
   static let mock = ListViewModel(hints: (1...10).map { number in
       .init(
         id: number,
-        title: "Title \(number)",
         text: HintModel.mock.text,
         date: Date()
       )
