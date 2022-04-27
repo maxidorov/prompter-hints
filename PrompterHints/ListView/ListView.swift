@@ -21,6 +21,7 @@ struct ListView: View {
         }
         .padding(.bottom, 80)
       }
+      .frame(maxWidth: .infinity)
       .overlay(NewNoteButton().dropShadow(), alignment: .bottom)
       .navigationTitle("Hints")
     }

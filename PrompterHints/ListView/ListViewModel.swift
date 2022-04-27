@@ -9,19 +9,21 @@ import Foundation
 import Combine
 
 final class ListViewModel: ObservableObject {
+  private let persistentManager: PersistentManaging
+  private var cancellable: AnyCancellable?
+
   @Published var hints: [HintModel]
 
-  init(hints: [HintModel]) {
-    self.hints = hints
+  init(persistentManager: PersistentManaging) {
+    self.persistentManager = persistentManager
+    self.hints = persistentManager.getHints()
+
+    self.cancellable = $hints.sink(receiveValue: { hints in
+      persistentManager.save(hints: hints)
+    })
   }
 }
 
 extension ListViewModel {
-  static let mock = ListViewModel(hints: (1...10).map { number in
-      .init(
-        id: number,
-        text: HintModel.mock.text,
-        date: Date()
-      )
-  })
+  static let mock = ListViewModel(persistentManager: UserDefaultsManager())
 }

@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PrompterHintsApp: App {
+  private let persitentManager: PersistentManaging = UserDefaultsManager()
+
   var body: some Scene {
     WindowGroup {
-      ListView(viewModel: .mock)
+      ListView(viewModel: .init(persistentManager: persitentManager))
     }
   }
 }

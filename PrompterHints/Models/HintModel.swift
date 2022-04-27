@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HintModel: Identifiable {
+struct HintModel: Identifiable, Codable {
   let id: Int
   let text: String
   let date: Date
