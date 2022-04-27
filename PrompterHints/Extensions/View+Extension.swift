@@ -1,5 +1,5 @@
 //
-//  View+Extensions.swift
+//  View+Extension.swift
 //  PrompterHints
 //
 //  Created by MSP on 27.04.2022.

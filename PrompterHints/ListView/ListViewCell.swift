@@ -20,7 +20,8 @@ struct ListViewCell: View {
 
       Spacer()
 
-      Text(model.subtitle)
+      Text(model.text)
+        .lineLimit(2)
 
       Spacer()
     }

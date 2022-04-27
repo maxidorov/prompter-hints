@@ -12,13 +12,19 @@ struct ListView: View {
   var viewModel: ListViewModel
 
   var body: some View {
-    ScrollView {
-      ForEach(viewModel.hints) { hint in
-        ListViewCell(model: hint)
-          .dropShadow()
-          .padding(.horizontal)
-          .padding(.vertical, .s1)
+    NavigationView {
+      ScrollView {
+        ForEach(viewModel.hints) { hint in
+          NavigationLink(destination: HintView(viewModel: .mock)) {
+            ListViewCell(model: hint)
+              .dropShadow()
+              .padding(.horizontal)
+              .padding(.vertical, .s1)
+          }
+          .buttonStyle(.plain)
+        }
       }
+      .navigationTitle("Hints")
     }
   }
 }
