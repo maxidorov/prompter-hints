@@ -15,12 +15,13 @@ struct TextView: UIViewRepresentable {
   func makeUIView(context: UIViewRepresentableContext<Self>) -> UITextView {
     let textView = UITextView()
     textView.delegate = delegate
-    textView.becomeFirstResponder()
     return textView
   }
 
   func updateUIView(_ uiView: UIViewType, context: UIViewRepresentableContext<Self>) {
     configuration(uiView)
+    uiView.delegate?.textViewDidChange?(uiView)
+    uiView.setContentOffset(.zero, animated: true)
   }
 }
 

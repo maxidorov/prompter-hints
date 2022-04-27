@@ -8,24 +8,37 @@
 import SwiftUI
 
 struct ListView: View {
-  @ObservedObject
-  var viewModel: ListViewModel
+  @ObservedObject var viewModel: ListViewModel
 
   var body: some View {
     NavigationView {
       ScrollView {
         ForEach(viewModel.hints) { hint in
-          NavigationLink(destination: HintView(viewModel: .mock)) {
-            ListViewCell(model: hint)
-              .dropShadow()
-              .padding(.horizontal)
-              .padding(.vertical, .s1)
+          NavigationLink(destination: makeDestination(for: hint)) {
+            makeCell(for: hint)
           }
           .buttonStyle(.plain)
         }
+        .padding(.bottom, 80)
       }
+      .overlay(NewNoteButton().dropShadow(), alignment: .bottom)
       .navigationTitle("Hints")
     }
+  }
+
+  private func makeCell(for hint: HintModel) -> some View {
+    ListViewCell(model: hint)
+      .dropShadow()
+      .padding(.horizontal)
+      .padding(.vertical, .s1)
+  }
+
+  private func makeDestination(for hint: HintModel) -> some View {
+    HintView(viewModel: .init(
+      mode: .edit,
+      title: hint.title,
+      text: hint.text
+    ))
   }
 }
 

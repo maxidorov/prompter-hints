@@ -11,18 +11,26 @@ import Combine
 struct HintView: View {
   @ObservedObject var viewModel: HintViewModel
 
-  var body: some View {
-    TextView {
-      $0.showsVerticalScrollIndicator = false
+  private var textView: some View {
+    TextView { textView in
+      textView.text = viewModel.textViewText
+      textView.showsVerticalScrollIndicator = false
+      viewModel.makeFirstResponderIfNeeded(textView)
     }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .navigationTitle("New Note")
-    .padding()
+  }
+
+  var body: some View {
+    textView
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .padding(.horizontal)
+      .navigationTitle(viewModel.mode.title)
+      .navigationBarTitleDisplayMode(.inline)
+      .ignoresSafeArea(.container, edges: [.bottom])
   }
 }
 
 struct HintView_Previews: PreviewProvider {
   static var previews: some View {
-    HintView(viewModel: .mock)
+    HintView(viewModel: .new)
   }
 }

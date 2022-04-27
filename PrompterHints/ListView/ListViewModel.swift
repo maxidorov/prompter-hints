@@ -9,8 +9,7 @@ import Foundation
 import Combine
 
 final class ListViewModel: ObservableObject {
-  @Published
-  var hints: [HintModel]
+  @Published var hints: [HintModel]
 
   init(hints: [HintModel]) {
     self.hints = hints
