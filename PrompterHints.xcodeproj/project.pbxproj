@@ -7,18 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */; };
+		724A54C32819898D0015F409 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 724A54C22819898D0015F409 /* Podfile */; };
+		72A129C028198BCE00E0DA0A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129BF28198BCE00E0DA0A /* ListViewModel.swift */; };
+		72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129C228198D3300E0DA0A /* ListViewCell.swift */; };
+		72A129C528198D9A00E0DA0A /* HintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129C428198D9A00E0DA0A /* HintModel.swift */; };
+		72A129C728198FF500E0DA0A /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129C628198FF500E0DA0A /* View+Extension.swift */; };
+		72A129CA2819906900E0DA0A /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129C92819906800E0DA0A /* CGFloat+Extension.swift */; };
+		72A129CE2819938B00E0DA0A /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129CD2819938B00E0DA0A /* HintView.swift */; };
+		72A129D0281993FB00E0DA0A /* HintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129CF281993FB00E0DA0A /* HintViewModel.swift */; };
+		72A129D428199C4E00E0DA0A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D328199C4E00E0DA0A /* TextView.swift */; };
+		72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D528199E6300E0DA0A /* UITextView+Extension.swift */; };
+		72A129D828199EE400E0DA0A /* Brandbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D728199EE400E0DA0A /* Brandbook.swift */; };
+		72A129DA28199F2300E0DA0A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D928199F2300E0DA0A /* UserDefaults.swift */; };
+		72A129DC28199F6F00E0DA0A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DB28199F6F00E0DA0A /* UIColor+Extension.swift */; };
+		72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */; };
+		72A129E02819CBB700E0DA0A /* HintViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DF2819CBB700E0DA0A /* HintViewMode.swift */; };
 		72A4814828198333009A5435 /* PrompterHintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4814728198333009A5435 /* PrompterHintsApp.swift */; };
-		72A4814A28198333009A5435 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4814928198333009A5435 /* ContentView.swift */; };
+		72A4814A28198333009A5435 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4814928198333009A5435 /* ListView.swift */; };
 		72A4814C28198334009A5435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814B28198334009A5435 /* Assets.xcassets */; };
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050CAC641958470A29EC0E87 /* Pods-PrompterHints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrompterHints.release.xcconfig"; path = "Target Support Files/Pods-PrompterHints/Pods-PrompterHints.release.xcconfig"; sourceTree = "<group>"; };
+		724A54C22819898D0015F409 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		72A129BF28198BCE00E0DA0A /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		72A129C228198D3300E0DA0A /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		72A129C428198D9A00E0DA0A /* HintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintModel.swift; sourceTree = "<group>"; };
+		72A129C628198FF500E0DA0A /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		72A129C92819906800E0DA0A /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		72A129CD2819938B00E0DA0A /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
+		72A129CF281993FB00E0DA0A /* HintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewModel.swift; sourceTree = "<group>"; };
+		72A129D328199C4E00E0DA0A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		72A129D528199E6300E0DA0A /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		72A129D728199EE400E0DA0A /* Brandbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brandbook.swift; sourceTree = "<group>"; };
+		72A129D928199F2300E0DA0A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		72A129DB28199F6F00E0DA0A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteButton.swift; sourceTree = "<group>"; };
+		72A129DF2819CBB700E0DA0A /* HintViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewMode.swift; sourceTree = "<group>"; };
 		72A4814428198333009A5435 /* PrompterHints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrompterHints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A4814728198333009A5435 /* PrompterHintsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterHintsApp.swift; sourceTree = "<group>"; };
-		72A4814928198333009A5435 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72A4814928198333009A5435 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72A4814B28198334009A5435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A4814E28198334009A5435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrompterHints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2330F9DA965ECE4B8633B19 /* Pods-PrompterHints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrompterHints.debug.xcconfig"; path = "Target Support Files/Pods-PrompterHints/Pods-PrompterHints.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +60,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72A129C128198BD600E0DA0A /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				72A4814928198333009A5435 /* ListView.swift */,
+				72A129C228198D3300E0DA0A /* ListViewCell.swift */,
+				72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */,
+				72A129BF28198BCE00E0DA0A /* ListViewModel.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		72A129C82819905F00E0DA0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				72A129C628198FF500E0DA0A /* View+Extension.swift */,
+				72A129C92819906800E0DA0A /* CGFloat+Extension.swift */,
+				72A129D528199E6300E0DA0A /* UITextView+Extension.swift */,
+				72A129DB28199F6F00E0DA0A /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		72A129CB281991DD00E0DA0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72A129C428198D9A00E0DA0A /* HintModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72A129CC2819937C00E0DA0A /* HintView */ = {
+			isa = PBXGroup;
+			children = (
+				72A129CD2819938B00E0DA0A /* HintView.swift */,
+				72A129D328199C4E00E0DA0A /* TextView.swift */,
+				72A129CF281993FB00E0DA0A /* HintViewModel.swift */,
+				72A129DF2819CBB700E0DA0A /* HintViewMode.swift */,
+			);
+			path = HintView;
+			sourceTree = "<group>";
+		};
 		72A4813B28198333009A5435 = {
 			isa = PBXGroup;
 			children = (
+				724A54C22819898D0015F409 /* Podfile */,
 				72A4814628198333009A5435 /* PrompterHints */,
 				72A4814528198333009A5435 /* Products */,
+				F31DF35ACDC5DD2AB036F473 /* Pods */,
+				F3006EC5E524392BFF7DB66E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +130,14 @@
 		72A4814628198333009A5435 /* PrompterHints */ = {
 			isa = PBXGroup;
 			children = (
-				72A4814728198333009A5435 /* PrompterHintsApp.swift */,
-				72A4814928198333009A5435 /* ContentView.swift */,
 				72A4814B28198334009A5435 /* Assets.xcassets */,
+				72A4814728198333009A5435 /* PrompterHintsApp.swift */,
+				72A129D728199EE400E0DA0A /* Brandbook.swift */,
+				72A129D928199F2300E0DA0A /* UserDefaults.swift */,
+				72A129CB281991DD00E0DA0A /* Models */,
+				72A129C128198BD600E0DA0A /* ListView */,
+				72A129CC2819937C00E0DA0A /* HintView */,
+				72A129C82819905F00E0DA0A /* Extensions */,
 				72A4814D28198334009A5435 /* Preview Content */,
 			);
 			path = PrompterHints;
@@ -67,6 +151,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F3006EC5E524392BFF7DB66E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F31DF35ACDC5DD2AB036F473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2330F9DA965ECE4B8633B19 /* Pods-PrompterHints.debug.xcconfig */,
+				050CAC641958470A29EC0E87 /* Pods-PrompterHints.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72A4815228198334009A5435 /* Build configuration list for PBXNativeTarget "PrompterHints" */;
 			buildPhases = (
+				3E0E99E3D1C2EB728AD88646 /* [CP] Check Pods Manifest.lock */,
 				72A4814028198333009A5435 /* Sources */,
 				72A4814128198333009A5435 /* Frameworks */,
 				72A4814228198333009A5435 /* Resources */,
+				72A129BE28198A6300E0DA0A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -125,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724A54C32819898D0015F409 /* Podfile in Resources */,
 				72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */,
 				72A4814C28198334009A5435 /* Assets.xcassets in Resources */,
 			);
@@ -132,13 +236,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E0E99E3D1C2EB728AD88646 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrompterHints-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72A129BE28198A6300E0DA0A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\"${PODS_ROOT}/SwiftLint/swiftlint\" --fix\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		72A4814028198333009A5435 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72A4814A28198333009A5435 /* ContentView.swift in Sources */,
+				72A129E02819CBB700E0DA0A /* HintViewMode.swift in Sources */,
+				72A129D828199EE400E0DA0A /* Brandbook.swift in Sources */,
+				72A129D0281993FB00E0DA0A /* HintViewModel.swift in Sources */,
+				72A129C528198D9A00E0DA0A /* HintModel.swift in Sources */,
+				72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */,
+				72A129DA28199F2300E0DA0A /* UserDefaults.swift in Sources */,
+				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
+				72A4814A28198333009A5435 /* ListView.swift in Sources */,
+				72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */,
+				72A129DC28199F6F00E0DA0A /* UIColor+Extension.swift in Sources */,
 				72A4814828198333009A5435 /* PrompterHintsApp.swift in Sources */,
+				72A129C728198FF500E0DA0A /* View+Extension.swift in Sources */,
+				72A129CA2819906900E0DA0A /* CGFloat+Extension.swift in Sources */,
+				72A129C028198BCE00E0DA0A /* ListViewModel.swift in Sources */,
+				72A129CE2819938B00E0DA0A /* HintView.swift in Sources */,
+				72A129D428199C4E00E0DA0A /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +424,7 @@
 		};
 		72A4815328198334009A5435 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2330F9DA965ECE4B8633B19 /* Pods-PrompterHints.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -277,6 +439,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,6 +455,7 @@
 		};
 		72A4815428198334009A5435 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050CAC641958470A29EC0E87 /* Pods-PrompterHints.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +470,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

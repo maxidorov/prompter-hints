@@ -1,0 +1,6 @@
+framework module Pods_PrompterHints {
+  umbrella header "Pods-PrompterHints-umbrella.h"
+
+  export *
+  module * { export * }
+}
