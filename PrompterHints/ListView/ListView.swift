@@ -35,7 +35,7 @@ struct ListView: View {
   }
 
   private func makeDestination(for hint: HintModel) -> some View {
-    NewHintView(viewModel: .init(store: store))
+    EditHintView(viewModel: .init(store: store, hint: hint))
   }
 }
 

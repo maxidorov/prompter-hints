@@ -43,3 +43,9 @@ struct TextView: UIViewRepresentable {
     Coordinator($text)
   }
 }
+
+extension TextView: Equatable {
+  static func == (lhs: Self, rhs: Self) -> Bool {
+    return true
+  }
+}

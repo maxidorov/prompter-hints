@@ -11,7 +11,7 @@ struct NewHintView: View {
   @ObservedObject var viewModel: NewHintViewModel
 
   var body: some View {
-    TextView(text: $viewModel.text)
+    TextView(text: $viewModel.text).equatable()  // dummy fix to prevent missing cursor
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .padding(.horizontal)
       .navigationTitle("New Hint")

@@ -30,6 +30,8 @@
 		72A4814A28198333009A5435 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4814928198333009A5435 /* ListView.swift */; };
 		72A4814C28198334009A5435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814B28198334009A5435 /* Assets.xcassets */; };
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
+		72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777D281C2D7200C1D280 /* EditHintView.swift */; };
+		72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		72A4814928198333009A5435 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72A4814B28198334009A5435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A4814E28198334009A5435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72D9777D281C2D7200C1D280 /* EditHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHintView.swift; sourceTree = "<group>"; };
+		72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHintViewModel.swift; sourceTree = "<group>"; };
 		74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrompterHints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2330F9DA965ECE4B8633B19 /* Pods-PrompterHints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrompterHints.debug.xcconfig"; path = "Target Support Files/Pods-PrompterHints/Pods-PrompterHints.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,13 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7262C685281B19B200F4FB03 /* HintsView */ = {
+		7262C685281B19B200F4FB03 /* NewHintView */ = {
 			isa = PBXGroup;
 			children = (
 				7262C686281B19C100F4FB03 /* NewHintView.swift */,
 				7262C688281B1EA000F4FB03 /* NewHintViewModel.swift */,
 			);
-			path = HintsView;
+			path = NewHintView;
 			sourceTree = "<group>";
 		};
 		72A129C128198BD600E0DA0A /* ListView */ = {
@@ -153,7 +157,8 @@
 				72A129E72819D6DB00E0DA0A /* Persistent */,
 				72A129CB281991DD00E0DA0A /* Models */,
 				72A129C128198BD600E0DA0A /* ListView */,
-				7262C685281B19B200F4FB03 /* HintsView */,
+				7262C685281B19B200F4FB03 /* NewHintView */,
+				72D9777C281C2D6300C1D280 /* EditHintView */,
 				72A129C82819905F00E0DA0A /* Extensions */,
 				72A4814D28198334009A5435 /* Preview Content */,
 			);
@@ -166,6 +171,15 @@
 				72A4814E28198334009A5435 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72D9777C281C2D6300C1D280 /* EditHintView */ = {
+			isa = PBXGroup;
+			children = (
+				72D9777D281C2D7200C1D280 /* EditHintView.swift */,
+				72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */,
+			);
+			path = EditHintView;
 			sourceTree = "<group>";
 		};
 		F3006EC5E524392BFF7DB66E /* Frameworks */ = {
@@ -306,7 +320,9 @@
 				72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */,
 				72A129DA28199F2300E0DA0A /* UserDefaults.swift in Sources */,
 				7262C687281B19C100F4FB03 /* NewHintView.swift in Sources */,
+				72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */,
 				72A129EB2819DFFE00E0DA0A /* UserDefaultsManager.swift in Sources */,
+				72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */,
 				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,
 				72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */,
