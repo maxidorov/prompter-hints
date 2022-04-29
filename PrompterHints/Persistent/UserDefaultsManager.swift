@@ -21,6 +21,10 @@ final class UserDefaultsManager: PersistentManaging {
   func getHints() -> [HintModel] {
     defaults.data(forKey: hintsKey).flatMap { data in
       try? decoder.decode([HintModel].self, from: data)
-    } ?? []
+    }?.sorted(by: { $0.date > $1.date }) ?? []
   }
+}
+
+extension UserDefaultsManager {
+  static let mock = UserDefaultsManager()
 }

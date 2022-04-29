@@ -13,7 +13,7 @@ struct PrompterHintsApp: App {
 
   var body: some Scene {
     WindowGroup {
-      ListView(viewModel: .init(persistentManager: persitentManager))
+      ListView(store: .init(persistentManager: persitentManager))
     }
   }
 }

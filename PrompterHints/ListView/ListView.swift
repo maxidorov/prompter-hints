@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ListView: View {
-  @ObservedObject var viewModel: ListViewModel
+  @ObservedObject var store: HintsStore
 
   var body: some View {
     NavigationView {
       ScrollView {
-        ForEach(viewModel.hints) { hint in
+        ForEach(store.hints) { hint in
           NavigationLink(destination: makeDestination(for: hint)) {
             makeCell(for: hint)
           }
@@ -22,7 +22,7 @@ struct ListView: View {
         .padding(.bottom, 80)
       }
       .frame(maxWidth: .infinity)
-      .overlay(NewNoteButton().dropShadow(), alignment: .bottom)
+      .overlay(NewNoteButton(store: store).dropShadow(), alignment: .bottom)
       .navigationTitle("Hints")
     }
   }
@@ -35,15 +35,12 @@ struct ListView: View {
   }
 
   private func makeDestination(for hint: HintModel) -> some View {
-    HintView(viewModel: .init(
-      mode: .edit,
-      text: hint.text
-    ))
+    NewHintView(viewModel: .init(store: store))
   }
 }
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ListView(viewModel: .mock)
+    ListView(store: .mock)
   }
 }

@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct NewNoteButton: View {
+  let store: HintsStore
+
   var body: some View {
-    NavigationLink(destination: HintView(viewModel: .new)) {
+    NavigationLink(destination: NewHintView(viewModel: .init(store: store))) {
       Text("New Hint")
         .fontWeight(.medium)
         .foregroundColor(.black.opacity(0.8))
@@ -23,7 +25,7 @@ struct NewNoteButton: View {
 
 struct NewNoteButton_Previews: PreviewProvider {
   static var previews: some View {
-    NewNoteButton()
+    NewNoteButton(store: .mock)
       .previewLayout(.sizeThatFits)
   }
 }
