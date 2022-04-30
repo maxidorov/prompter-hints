@@ -13,7 +13,19 @@ struct PrompterHintsApp: App {
 
   var body: some Scene {
     WindowGroup {
-      ListView(store: .init(persistentManager: persitentManager))
+      switch appMode {
+      case .prod:
+        ListView(store: .init(persistentManager: persitentManager))
+      case .cameraView:
+        CameraView()
+      }
     }
   }
 }
+
+enum AppMode {
+  case prod
+  case cameraView
+}
+
+private let appMode: AppMode = .cameraView

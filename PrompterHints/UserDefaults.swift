@@ -13,7 +13,7 @@ struct UserDefaultKeys {
 }
 
 extension UserDefaults {
-  static let applicationDefaults: [String : Any] = [
+  static let applicationDefaults: [String: Any] = [
     UserDefaultKeys.textViewTextFontSize: 18.0,
     UserDefaultKeys.textScrollingSpeed: 0.375
   ]
@@ -24,7 +24,12 @@ extension UserDefaults {
   }
 
   var textScrollingSpeed: Float {
-    get { float(forKey: UserDefaultKeys.textScrollingSpeed) }
-    set { set(newValue, forKey: UserDefaultKeys.textScrollingSpeed) }
+    get {
+//      float(forKey: UserDefaultKeys.textScrollingSpeed) // FIXME: return 0.0
+      0.375
+    }
+    set {
+      set(newValue, forKey: UserDefaultKeys.textScrollingSpeed)
+    }
   }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */; };
+		7228BF7E281C476D0067378C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF7D281C476D0067378C /* CameraView.swift */; };
+		7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */; };
+		7228BF84281C4D440067378C /* CameraFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF83281C4D440067378C /* CameraFooterView.swift */; };
+		7228BF86281C4FDE0067378C /* ScrollableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF85281C4FDE0067378C /* ScrollableTextView.swift */; };
 		724A54C32819898D0015F409 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 724A54C22819898D0015F409 /* Podfile */; };
 		7262C687281B19C100F4FB03 /* NewHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262C686281B19C100F4FB03 /* NewHintView.swift */; };
 		7262C689281B1EA000F4FB03 /* NewHintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262C688281B1EA000F4FB03 /* NewHintViewModel.swift */; };
@@ -32,11 +36,15 @@
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
 		72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777D281C2D7200C1D280 /* EditHintView.swift */; };
 		72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */; };
-		72D97783281C369600C1D280 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D97782281C369600C1D280 /* CameraButtonView.swift */; };
+		72D97783281C369600C1D280 /* CameraRecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D97782281C369600C1D280 /* CameraRecordButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		050CAC641958470A29EC0E87 /* Pods-PrompterHints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrompterHints.release.xcconfig"; path = "Target Support Files/Pods-PrompterHints/Pods-PrompterHints.release.xcconfig"; sourceTree = "<group>"; };
+		7228BF7D281C476D0067378C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSwitchButtonView.swift; sourceTree = "<group>"; };
+		7228BF83281C4D440067378C /* CameraFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFooterView.swift; sourceTree = "<group>"; };
+		7228BF85281C4FDE0067378C /* ScrollableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableTextView.swift; sourceTree = "<group>"; };
 		724A54C22819898D0015F409 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7262C686281B19C100F4FB03 /* NewHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHintView.swift; sourceTree = "<group>"; };
 		7262C688281B1EA000F4FB03 /* NewHintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHintViewModel.swift; sourceTree = "<group>"; };
@@ -62,7 +70,7 @@
 		72A4814E28198334009A5435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72D9777D281C2D7200C1D280 /* EditHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHintView.swift; sourceTree = "<group>"; };
 		72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHintViewModel.swift; sourceTree = "<group>"; };
-		72D97782281C369600C1D280 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
+		72D97782281C369600C1D280 /* CameraRecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRecordButtonView.swift; sourceTree = "<group>"; };
 		74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrompterHints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2330F9DA965ECE4B8633B19 /* Pods-PrompterHints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrompterHints.debug.xcconfig"; path = "Target Support Files/Pods-PrompterHints/Pods-PrompterHints.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7228BF7C281C47600067378C /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				7228BF7D281C476D0067378C /* CameraView.swift */,
+				7228BF83281C4D440067378C /* CameraFooterView.swift */,
+				7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */,
+				72D97782281C369600C1D280 /* CameraRecordButtonView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		7262C685281B19B200F4FB03 /* NewHintView */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +180,7 @@
 				72A129C128198BD600E0DA0A /* ListView */,
 				7262C685281B19B200F4FB03 /* NewHintView */,
 				72D9777C281C2D6300C1D280 /* EditHintView */,
+				7228BF7C281C47600067378C /* CameraView */,
 				72A129C82819905F00E0DA0A /* Extensions */,
 				72A4814D28198334009A5435 /* Preview Content */,
 			);
@@ -188,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				72A129D328199C4E00E0DA0A /* TextView.swift */,
-				72D97782281C369600C1D280 /* CameraButtonView.swift */,
+				7228BF85281C4FDE0067378C /* ScrollableTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,15 +355,19 @@
 				72A129EB2819DFFE00E0DA0A /* UserDefaultsManager.swift in Sources */,
 				72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */,
 				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
+				7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,
 				72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */,
-				72D97783281C369600C1D280 /* CameraButtonView.swift in Sources */,
+				72D97783281C369600C1D280 /* CameraRecordButtonView.swift in Sources */,
 				72A129DC28199F6F00E0DA0A /* UIColor+Extension.swift in Sources */,
 				72A129E42819D26400E0DA0A /* String+Extension.swift in Sources */,
 				72A4814828198333009A5435 /* PrompterHintsApp.swift in Sources */,
+				7228BF84281C4D440067378C /* CameraFooterView.swift in Sources */,
+				7228BF86281C4FDE0067378C /* ScrollableTextView.swift in Sources */,
 				72A129C728198FF500E0DA0A /* View+Extension.swift in Sources */,
 				72A129E92819D6ED00E0DA0A /* PersistentManaging.swift in Sources */,
 				72A129CA2819906900E0DA0A /* CGFloat+Extension.swift in Sources */,
+				7228BF7E281C476D0067378C /* CameraView.swift in Sources */,
 				72A129C028198BCE00E0DA0A /* HintsStore.swift in Sources */,
 				7262C689281B1EA000F4FB03 /* NewHintViewModel.swift in Sources */,
 				72A129D428199C4E00E0DA0A /* TextView.swift in Sources */,
@@ -482,6 +506,7 @@
 				DEVELOPMENT_TEAM = FABNM4L4H4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +538,7 @@
 				DEVELOPMENT_TEAM = FABNM4L4H4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

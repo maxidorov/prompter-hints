@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct CameraButtonView: View {
+struct CameraRecordButtonView: View {
+  static let size: CGFloat = 68
+
   @Binding var isRecording: Bool
 
   var body: some View {
@@ -17,24 +19,24 @@ struct CameraButtonView: View {
 
       Circle()
         .foregroundColor(.black)
-        .frame(square: 40)
+        .frame(square: Self.size - 4)
 
       Rectangle()
         .foregroundColor(.red)
-        .frame(square: isRecording ? 20: 38)
-        .cornerRadius(isRecording ? 6 : 19)
+        .frame(square: isRecording ? 32: Self.size - 8)
+        .cornerRadius(isRecording ? 10 : (Self.size - 8) / 2)
     }
-    .frame(square: 44)
+    .frame(square: Self.size)
   }
 }
 
 struct CameraButtonView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      CameraButtonView(isRecording: .constant(false))
-      CameraButtonView(isRecording: .constant(true))
+      CameraRecordButtonView(isRecording: .constant(false))
+      CameraRecordButtonView(isRecording: .constant(true))
     }
       .background(Color.black)
-      .previewLayout(.fixed(width: 44, height: 44))
+      .previewLayout(.fixed(width: 68, height: 68))
   }
 }
