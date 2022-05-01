@@ -9,6 +9,17 @@ import SwiftUI
 
 struct ListView: View {
   @ObservedObject var store: HintsStore
+  @State var settingsViewPresented = false
+
+  private var settingsToolbar: ToolbarItem<Void, Button<Image>> {
+    ToolbarItem(placement: .navigationBarTrailing) {
+      Button {
+        settingsViewPresented = true
+      } label: {
+        Image(systemName: "slider.horizontal.3")
+      }
+    }
+  }
 
   var body: some View {
     NavigationView {
@@ -24,6 +35,12 @@ struct ListView: View {
       .frame(maxWidth: .infinity)
       .overlay(NewNoteButton(store: store).dropShadow(), alignment: .bottom)
       .navigationTitle("Hints")
+      .toolbar { settingsToolbar }
+      .sheet(
+        isPresented: $settingsViewPresented,
+        onDismiss: { settingsViewPresented = false },
+        content: { SettingsView() }
+      )
     }
   }
 

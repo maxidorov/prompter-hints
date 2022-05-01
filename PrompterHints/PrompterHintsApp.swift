@@ -11,6 +11,10 @@ import SwiftUI
 struct PrompterHintsApp: App {
   private let persitentManager: PersistentManaging = UserDefaultsManager()
 
+  init() {
+    UIView.appearance().tintColor = .black
+  }
+
   var body: some Scene {
     WindowGroup {
       switch appMode {
