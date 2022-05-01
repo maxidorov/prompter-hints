@@ -33,8 +33,18 @@ final class HintsStore: ObservableObject {
     }
     hints.sort { $0.date > $1.date }
   }
+
+  func delete(id: Int) {
+    hints.removeAll(where: { $0.id == id })
+  }
 }
 
 extension HintsStore {
-  static let mock = HintsStore(persistentManager: UserDefaultsManager())
+  static let mock: HintsStore = {
+    let store = HintsStore(persistentManager: UserDefaultsManager())
+    (0...9).map { index in
+      store.hints.append(.init(id: index, text: "\(index)", date: Date()))
+    }
+    return store
+  }()
 }

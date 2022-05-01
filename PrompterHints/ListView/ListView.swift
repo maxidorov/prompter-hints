@@ -29,7 +29,17 @@ struct ListView: View {
             makeCell(for: hint)
           }
           .buttonStyle(.plain)
+          .contextMenu {
+            Button {
+              withAnimation { store.delete(id: hint.id) }
+            } label: {
+              Label("Delete", systemImage: "trash")
+            }
+          }
+          .padding(.vertical, .s1)
+
         }
+        .padding(.horizontal)
         .padding(.bottom, 80)
       }
       .frame(maxWidth: .infinity)
@@ -47,8 +57,6 @@ struct ListView: View {
   private func makeCell(for hint: HintModel) -> some View {
     ListViewCell(model: .init(from: hint))
       .dropShadow()
-      .padding(.horizontal)
-      .padding(.vertical, .s1)
   }
 
   private func makeDestination(for hint: HintModel) -> some View {

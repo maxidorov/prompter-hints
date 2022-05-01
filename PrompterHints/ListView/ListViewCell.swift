@@ -31,7 +31,7 @@ struct ListViewCell: View {
     }
     .padding()
     .background(Color.white)
-    .cornerRadius(20)
+    .cornerRadius(12)
   }
 }
 
