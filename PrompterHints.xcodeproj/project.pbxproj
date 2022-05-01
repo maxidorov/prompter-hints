@@ -34,6 +34,7 @@
 		72A4814A28198333009A5435 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4814928198333009A5435 /* ListView.swift */; };
 		72A4814C28198334009A5435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814B28198334009A5435 /* Assets.xcassets */; };
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
+		72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C2281E6C3C000389B3 /* Date+Extension.swift */; };
 		72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777D281C2D7200C1D280 /* EditHintView.swift */; };
 		72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */; };
 		72D97783281C369600C1D280 /* CameraRecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D97782281C369600C1D280 /* CameraRecordButtonView.swift */; };
@@ -68,6 +69,7 @@
 		72A4814928198333009A5435 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72A4814B28198334009A5435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A4814E28198334009A5435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72C658C2281E6C3C000389B3 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		72D9777D281C2D7200C1D280 /* EditHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHintView.swift; sourceTree = "<group>"; };
 		72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHintViewModel.swift; sourceTree = "<group>"; };
 		72D97782281C369600C1D280 /* CameraRecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRecordButtonView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				72A129D528199E6300E0DA0A /* UITextView+Extension.swift */,
 				72A129DB28199F6F00E0DA0A /* UIColor+Extension.swift */,
 				72A129E32819D26400E0DA0A /* String+Extension.swift */,
+				72C658C2281E6C3C000389B3 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */,
 				72A129EB2819DFFE00E0DA0A /* UserDefaultsManager.swift in Sources */,
 				72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */,
+				72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */,
 				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
 				7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,

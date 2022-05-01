@@ -18,8 +18,8 @@ struct ListViewCell: View {
 
         Spacer()
 
-        Text("\(model.date)".prefix(10))
-          .foregroundColor(.gray)
+        Text(model.dateDescription)
+          .foregroundColor(.black.opacity(0.3))
       }
 
       Spacer()

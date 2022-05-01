@@ -28,4 +28,4 @@ enum AppMode {
   case cameraView
 }
 
-private let appMode: AppMode = .cameraView
+private let appMode: AppMode = .prod
