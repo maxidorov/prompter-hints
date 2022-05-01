@@ -39,7 +39,7 @@ struct ListView: View {
       .sheet(
         isPresented: $settingsViewPresented,
         onDismiss: { settingsViewPresented = false },
-        content: { SettingsView() }
+        content: { SettingsView(presented: $settingsViewPresented) }
       )
     }
   }

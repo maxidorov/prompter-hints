@@ -22,6 +22,8 @@ struct PrompterHintsApp: App {
         ListView(store: .init(persistentManager: persitentManager))
       case .cameraView:
         CameraView()
+      case .settings:
+        SettingsView(presented: .constant(true))
       }
     }
   }
@@ -30,6 +32,7 @@ struct PrompterHintsApp: App {
 enum AppMode {
   case prod
   case cameraView
+  case settings
 }
 
 private let appMode: AppMode = .prod

@@ -13,18 +13,26 @@ struct ScrollableTextView: UIViewRepresentable {
   typealias UIViewType = ScrollableUITextView
 
   var text: String
+  @Binding var speed: CGFloat
+  @Binding var fontSize: CGFloat
 
   func makeUIView(context: Context) -> ScrollableUITextView {
     let view = ScrollableUITextView()
     view.text = text
     view.backgroundColor = .clear
     view.showsVerticalScrollIndicator = false
-    view.setAttributedString(titleFontSize: 22, textFontSize: 18)
+    view.setAttributedString()
     view.startScrolling()
     return view
   }
 
-  func updateUIView(_ uiView: ScrollableUITextView, context: Context) {}
+  func updateUIView(_ uiView: ScrollableUITextView, context: Context) {
+    uiView.scrollingSpeed = speed
+    uiView.setAttributedString(
+      titleFontSize: 17 + 10 * fontSize,
+      textFontSize: 13 + 10 * fontSize
+    )
+  }
 }
 
 class ScrollableUITextView: AttributedUITextView {

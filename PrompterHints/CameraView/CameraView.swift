@@ -14,7 +14,11 @@ struct CameraView: View {
         .ignoresSafeArea()
 
       VStack {
-        ScrollableTextView(text: HintModel.mock.text)
+        ScrollableTextView(
+          text: HintModel.mock.text,
+          speed: .constant(0.5),
+          fontSize: .constant(0.5)
+        )
           .padding()
 
         CameraFooterView()
