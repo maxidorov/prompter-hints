@@ -12,20 +12,30 @@ import CameraManager
 final class CameraViewController: UIViewControllerRepresentable {
   typealias UIViewControllerType = CameraUIViewController
 
+  private let cameraViewModel: CameraViewModel
+
+  init(cameraViewModel: CameraViewModel) {
+    self.cameraViewModel = cameraViewModel
+  }
+
   func makeUIViewController(context: Context) -> CameraUIViewController {
-    CameraUIViewController()
+    CameraUIViewController(cameraManager: cameraViewModel.cameraManager)
   }
 
   func updateUIViewController(_ uiViewController: CameraUIViewController, context: Context) {}
 }
 
 final class CameraUIViewController: UIViewController {
+  private let cameraManager: CameraManager
 
-  private let cameraManager: CameraManager = {
-    let cm = CameraManager()
-    cm.cameraOutputMode = .videoWithMic
-    return cm
-  }()
+  init(cameraManager: CameraManager) {
+    self.cameraManager = cameraManager
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder: NSCoder) {
+    preconditionFailure("init(coder:) has not been implemented")
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()

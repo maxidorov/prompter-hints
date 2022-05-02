@@ -21,7 +21,7 @@ struct PrompterHintsApp: App {
       case .prod:
         ListView(store: .init(persistentManager: persitentManager))
       case .cameraView:
-        CameraView()
+        CameraView(viewModel: CameraViewModel())
       case .settings:
         SettingsView(presented: .constant(true))
       }

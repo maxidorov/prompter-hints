@@ -36,6 +36,7 @@
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
 		72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA01F128200BB000F67DAA /* CameraViewController.swift */; };
 		72AA01F528200C6A00F67DAA /* CameraManager in Frameworks */ = {isa = PBXBuildFile; productRef = 72AA01F428200C6A00F67DAA /* CameraManager */; };
+		72AA01F728200FEB00F67DAA /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA01F628200FEB00F67DAA /* CameraViewModel.swift */; };
 		72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C2281E6C3C000389B3 /* Date+Extension.swift */; };
 		72C658C6281E7187000389B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C5281E7187000389B3 /* SettingsView.swift */; };
 		72C658CD281E8D57000389B3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658CC281E8D57000389B3 /* SettingsViewModel.swift */; };
@@ -74,6 +75,7 @@
 		72A4814B28198334009A5435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A4814E28198334009A5435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72AA01F128200BB000F67DAA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		72AA01F628200FEB00F67DAA /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		72C658C2281E6C3C000389B3 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		72C658C5281E7187000389B3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		72C658CC281E8D57000389B3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7228BF7D281C476D0067378C /* CameraView.swift */,
+				72AA01F628200FEB00F67DAA /* CameraViewModel.swift */,
 				7228BF83281C4D440067378C /* CameraFooterView.swift */,
 				7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */,
 				72D97782281C369600C1D280 /* CameraRecordButtonView.swift */,
@@ -378,6 +381,7 @@
 				72A129C528198D9A00E0DA0A /* HintModel.swift in Sources */,
 				72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */,
 				72A129DA28199F2300E0DA0A /* UserDefaults.swift in Sources */,
+				72AA01F728200FEB00F67DAA /* CameraViewModel.swift in Sources */,
 				7262C687281B19C100F4FB03 /* NewHintView.swift in Sources */,
 				72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */,
 				72A129EB2819DFFE00E0DA0A /* UserDefaultsManager.swift in Sources */,
@@ -541,6 +545,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -575,6 +580,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

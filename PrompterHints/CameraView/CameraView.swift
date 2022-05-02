@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct CameraView: View {
+  @ObservedObject var viewModel: CameraViewModel
+
   var body: some View {
     ZStack {
-      CameraViewController()
+      CameraViewController(cameraViewModel: viewModel)
         .ignoresSafeArea()
 
       ScrollableTextView(
@@ -22,12 +24,19 @@ struct CameraView: View {
         .fadeEdjes()
         .padding(.horizontal)
     }
-    .overlay(CameraFooterView(), alignment: .bottom)
+    .overlay(
+      CameraFooterView(
+        isRecording: $viewModel.isRecording,
+        startRecordingAction: viewModel.startRecording,
+        stopRecrodingAction: viewModel.stopRecording
+      ),
+      alignment: .bottom
+    )
   }
 }
 
 struct CameraView_Previews: PreviewProvider {
   static var previews: some View {
-    CameraView()
+    CameraView(viewModel: .mock)
   }
 }
