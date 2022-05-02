@@ -21,7 +21,7 @@ struct PrompterHintsApp: App {
       case .prod:
         ListView(store: .init(persistentManager: persitentManager))
       case .cameraView:
-        CameraView(viewModel: CameraViewModel())
+        CameraView(viewModel: CameraViewModel(text: HintModel.mock.text))
       case .settings:
         SettingsView(presented: .constant(true))
       }
@@ -35,4 +35,4 @@ enum AppMode {
   case settings
 }
 
-private let appMode: AppMode = .cameraView
+private let appMode: AppMode = .prod

@@ -18,6 +18,7 @@ struct CameraFooterView: View {
         .foregroundColor(.clear)
         .frame(height: CameraRecordButtonView.size)
         .frame(maxWidth: .infinity)
+
       CameraRecordButtonView(
         isRecording: $isRecording,
         startRecordingAction: startRecordingAction,
@@ -32,7 +33,11 @@ struct CameraFooterView: View {
 
 struct CameraBottomView_Previews: PreviewProvider {
   static var previews: some View {
-    CameraFooterView(isRecording: .constant(false), startRecordingAction: {}, stopRecrodingAction: {})
+    CameraFooterView(
+      isRecording: .constant(false),
+      startRecordingAction: {},
+      stopRecrodingAction: {}
+    )
       .previewLayout(.sizeThatFits)
   }
 }

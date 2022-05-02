@@ -9,15 +9,30 @@ import SwiftUI
 
 struct NewHintView: View {
   @ObservedObject var viewModel: NewHintViewModel
+  @State private var cameraViewPresented = false
 
   var body: some View {
     TextView(text: $viewModel.text).equatable()  // dummy fix to prevent missing cursor
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .padding(.horizontal)
+      .ignoresSafeArea(.container, edges: [.bottom])
       .navigationTitle("New Hint")
       .navigationBarTitleDisplayMode(.inline)
-      .ignoresSafeArea(.container, edges: [.bottom])
+      .toolbar {
+        Button {
+          cameraViewPresented = true
+        } label: {
+          Image(systemName: "camera")
+        }
+      }
       .onAppear(perform: viewModel.reset)
+      .fullScreenCover(
+        isPresented: $cameraViewPresented,
+        onDismiss: { cameraViewPresented = false },
+        content: {
+          CameraView(viewModel: CameraViewModel(text: viewModel.text))
+        }
+      )
   }
 }
 

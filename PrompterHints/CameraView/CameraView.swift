@@ -16,7 +16,7 @@ struct CameraView: View {
         .ignoresSafeArea()
 
       ScrollableTextView(
-        text: HintModel.mock.text,
+        text: viewModel.text,
         speed: .constant(0.5),
         fontSize: .constant(0.5)
       )

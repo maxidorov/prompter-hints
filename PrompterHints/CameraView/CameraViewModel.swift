@@ -12,6 +12,7 @@ import Photos
 import SwiftUI
 
 final class CameraViewModel: ObservableObject {
+  var text: String
   @Published var isRecording = false
 
   let cameraManager: CameraManager = {
@@ -19,6 +20,10 @@ final class CameraViewModel: ObservableObject {
     cm.cameraOutputMode = .videoWithMic
     return cm
   }()
+
+  init(text: String) {
+    self.text = text
+  }
 
   func startRecording() {
     cameraManager.startRecordingVideo()
@@ -48,5 +53,5 @@ final class CameraViewModel: ObservableObject {
 }
 
 extension CameraViewModel {
-  static let mock = CameraViewModel()
+  static let mock = CameraViewModel(text: HintModel.mock.text)
 }
