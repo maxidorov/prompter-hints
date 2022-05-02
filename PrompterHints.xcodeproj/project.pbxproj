@@ -35,6 +35,7 @@
 		72A4814C28198334009A5435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814B28198334009A5435 /* Assets.xcassets */; };
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
 		72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA01F128200BB000F67DAA /* CameraViewController.swift */; };
+		72AA01F528200C6A00F67DAA /* CameraManager in Frameworks */ = {isa = PBXBuildFile; productRef = 72AA01F428200C6A00F67DAA /* CameraManager */; };
 		72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C2281E6C3C000389B3 /* Date+Extension.swift */; };
 		72C658C6281E7187000389B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C5281E7187000389B3 /* SettingsView.swift */; };
 		72C658CD281E8D57000389B3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658CC281E8D57000389B3 /* SettingsViewModel.swift */; };
@@ -89,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */,
+				72AA01F528200C6A00F67DAA /* CameraManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +270,9 @@
 			dependencies = (
 			);
 			name = PrompterHints;
+			packageProductDependencies = (
+				72AA01F428200C6A00F67DAA /* CameraManager */,
+			);
 			productName = PrompterHints;
 			productReference = 72A4814428198333009A5435 /* PrompterHints.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +301,9 @@
 				Base,
 			);
 			mainGroup = 72A4813B28198333009A5435;
+			packageReferences = (
+				72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */,
+			);
 			productRefGroup = 72A4814528198333009A5435 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -608,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/imaginary-cloud/CameraManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72AA01F428200C6A00F67DAA /* CameraManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */;
+			productName = CameraManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72A4813C28198333009A5435 /* Project object */;
 }

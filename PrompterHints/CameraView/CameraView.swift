@@ -13,17 +13,16 @@ struct CameraView: View {
       CameraViewController()
         .ignoresSafeArea()
 
-      VStack {
-        ScrollableTextView(
-          text: HintModel.mock.text,
-          speed: .constant(0.5),
-          fontSize: .constant(0.5)
-        )
-          .padding()
-
-        CameraFooterView()
-      }
+      ScrollableTextView(
+        text: HintModel.mock.text,
+        speed: .constant(0.5),
+        fontSize: .constant(0.5)
+      )
+        .ignoresSafeArea()
+        .fadeEdjes()
+        .padding(.horizontal)
     }
+    .overlay(CameraFooterView(), alignment: .bottom)
   }
 }
 

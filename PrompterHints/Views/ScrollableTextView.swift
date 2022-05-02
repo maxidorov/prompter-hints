@@ -21,6 +21,7 @@ struct ScrollableTextView: UIViewRepresentable {
     view.text = text
     view.backgroundColor = .clear
     view.showsVerticalScrollIndicator = false
+    view.isEditable = false
     view.setAttributedString()
     view.startScrolling()
     return view

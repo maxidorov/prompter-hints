@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CameraManager",
+        "repositoryURL": "https://github.com/imaginary-cloud/CameraManager",
+        "state": {
+          "branch": "master",
+          "revision": "660d7b8326f43ab1721620cd4729b3928c8a767b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
