@@ -19,7 +19,6 @@ struct SettingsView: View {
           speed: $viewModel.speed,
           fontSize: $viewModel.fontSize
         )
-          .fadeEdjes()
           .padding(.horizontal)
 
         VStack {
@@ -39,7 +38,6 @@ struct SettingsView: View {
         } label: {
           Image(systemName: "xmark.circle")
         }
-
       }
     }
   }

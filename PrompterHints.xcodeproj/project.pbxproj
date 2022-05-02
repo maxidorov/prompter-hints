@@ -189,6 +189,7 @@
 				72A129D728199EE400E0DA0A /* Brandbook.swift */,
 				72A129D928199F2300E0DA0A /* UserDefaults.swift */,
 				72A129BF28198BCE00E0DA0A /* HintsStore.swift */,
+				72A129C82819905F00E0DA0A /* Extensions */,
 				72D97781281C368B00C1D280 /* Views */,
 				72A129E72819D6DB00E0DA0A /* Persistent */,
 				72A129CB281991DD00E0DA0A /* Models */,
@@ -197,7 +198,6 @@
 				72D9777C281C2D6300C1D280 /* EditHintView */,
 				72C658C4281E7177000389B3 /* SettingsView */,
 				7228BF7C281C47600067378C /* CameraView */,
-				72A129C82819905F00E0DA0A /* Extensions */,
 				72A4814D28198334009A5435 /* Preview Content */,
 			);
 			path = PrompterHints;

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CameraView: View {
+  @Binding var presented: Bool
   @ObservedObject var viewModel: CameraViewModel
 
   var body: some View {
@@ -20,10 +21,19 @@ struct CameraView: View {
         speed: .constant(0.5),
         fontSize: .constant(0.5)
       )
-        .ignoresSafeArea()
-        .fadeEdjes()
         .padding(.horizontal)
     }
+    .overlay(
+      Image(systemName: "xmark.circle.fill")
+        .resizable()
+        .frame(square: 24)
+        .offset(x: -24, y: 0)
+        .opacity(0.5)
+        .onTapGesture {
+          presented = false
+        },
+      alignment: .topTrailing
+    )
     .overlay(
       CameraFooterView(
         isRecording: $viewModel.isRecording,
@@ -37,6 +47,9 @@ struct CameraView: View {
 
 struct CameraView_Previews: PreviewProvider {
   static var previews: some View {
-    CameraView(viewModel: .mock)
+    CameraView(
+      presented: .constant(true),
+      viewModel: .mock
+    )
   }
 }

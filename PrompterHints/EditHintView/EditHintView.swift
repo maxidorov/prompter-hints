@@ -29,7 +29,10 @@ struct EditHintView: View {
         isPresented: $cameraViewPresented,
         onDismiss: { cameraViewPresented = false },
         content: {
-          CameraView(viewModel: CameraViewModel(text: viewModel.text))
+          CameraView(
+            presented: $cameraViewPresented,
+            viewModel: CameraViewModel(text: viewModel.text)
+          )
         }
       )
   }
