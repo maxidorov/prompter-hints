@@ -23,7 +23,7 @@
 		72A129D428199C4E00E0DA0A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D328199C4E00E0DA0A /* TextView.swift */; };
 		72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D528199E6300E0DA0A /* UITextView+Extension.swift */; };
 		72A129D828199EE400E0DA0A /* Brandbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D728199EE400E0DA0A /* Brandbook.swift */; };
-		72A129DA28199F2300E0DA0A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D928199F2300E0DA0A /* UserDefaults.swift */; };
+		72A129DA28199F2300E0DA0A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D928199F2300E0DA0A /* AppSettings.swift */; };
 		72A129DC28199F6F00E0DA0A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DB28199F6F00E0DA0A /* UIColor+Extension.swift */; };
 		72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */; };
 		72A129E22819D1C000E0DA0A /* ListViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129E12819D1C000E0DA0A /* ListViewCellModel.swift */; };
@@ -62,7 +62,7 @@
 		72A129D328199C4E00E0DA0A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		72A129D528199E6300E0DA0A /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		72A129D728199EE400E0DA0A /* Brandbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brandbook.swift; sourceTree = "<group>"; };
-		72A129D928199F2300E0DA0A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		72A129D928199F2300E0DA0A /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		72A129DB28199F6F00E0DA0A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteButton.swift; sourceTree = "<group>"; };
 		72A129E12819D1C000E0DA0A /* ListViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCellModel.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 				72A4814B28198334009A5435 /* Assets.xcassets */,
 				72A4814728198333009A5435 /* PrompterHintsApp.swift */,
 				72A129D728199EE400E0DA0A /* Brandbook.swift */,
-				72A129D928199F2300E0DA0A /* UserDefaults.swift */,
+				72A129D928199F2300E0DA0A /* AppSettings.swift */,
 				72A129BF28198BCE00E0DA0A /* HintsStore.swift */,
 				72A129C82819905F00E0DA0A /* Extensions */,
 				72D97781281C368B00C1D280 /* Views */,
@@ -380,7 +380,7 @@
 				72A129D828199EE400E0DA0A /* Brandbook.swift in Sources */,
 				72A129C528198D9A00E0DA0A /* HintModel.swift in Sources */,
 				72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */,
-				72A129DA28199F2300E0DA0A /* UserDefaults.swift in Sources */,
+				72A129DA28199F2300E0DA0A /* AppSettings.swift in Sources */,
 				72AA01F728200FEB00F67DAA /* CameraViewModel.swift in Sources */,
 				7262C687281B19C100F4FB03 /* NewHintView.swift in Sources */,
 				72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */,

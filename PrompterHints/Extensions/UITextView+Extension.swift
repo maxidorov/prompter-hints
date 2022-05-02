@@ -8,17 +8,14 @@
 import UIKit
 
 extension UITextView {
-  func setAttributedString(
-    titleFontSize: CGFloat? = nil,
-    textFontSize: CGFloat? = nil
-  ) {
+  func setAttributedString(textFontSize: CGFloat) {
     guard text != nil else { return }
 
     let attributedString = NSMutableAttributedString(string: text)
     let titleLength = titleLength()
 
-    let textFontSize = textFontSize ?? CGFloat(UserDefaults.standard.textViewTextFontSize)
-    let titleFontSize = titleFontSize ?? textFontSize + 4
+    let textFontSize = AppSettings.textViewFontSize
+    let titleFontSize = textFontSize + 4
 
     attributedString.addAttributes(
       [

@@ -22,31 +22,19 @@ struct ScrollableTextView: UIViewRepresentable {
     view.backgroundColor = .clear
     view.showsVerticalScrollIndicator = false
     view.isEditable = false
-    view.setAttributedString()
+    view.setAttributedString(textFontSize: AppSettings.textViewFontSize)
     view.startScrolling()
     return view
   }
 
   func updateUIView(_ uiView: ScrollableUITextView, context: Context) {
     uiView.scrollingSpeed = speed
-    uiView.setAttributedString(
-      titleFontSize: 17 + 10 * fontSize,
-      textFontSize: 13 + 10 * fontSize
-    )
+    uiView.setAttributedString(textFontSize: fontSize)
   }
 }
 
 class ScrollableUITextView: AttributedUITextView {
-  var scrollingSpeed = CGFloat(UserDefaults.standard.textScrollingSpeed) {
-    didSet {
-      switch scrollingSpeed {
-      case (1...): scrollingSpeed = 1
-      case (..<0): scrollingSpeed = 0
-      default: break
-      }
-      UserDefaults.standard.textScrollingSpeed = Float(scrollingSpeed)
-    }
-  }
+  var scrollingSpeed = AppSettings.textViewSpeed
 
   private var gap: CGFloat {
     return scrollingSpeed * 2
@@ -97,6 +85,6 @@ class AttributedUITextView: UITextView {
   private func setupAppearance() {
     tintColor = .black
     textContainerInset = UIEdgeInsets(top: 0, left: 16, bottom: 200, right: 16)
-    setAttributedString()
+//    setAttributedString(titleFontSize: <#CGFloat#>, textFontSize: <#CGFloat#>)
   }
 }

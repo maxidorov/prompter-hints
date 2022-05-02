@@ -9,21 +9,21 @@ import SwiftUI
 
 struct SettingsView: View {
   @Binding var presented: Bool
-  @ObservedObject private var viewModel = SettingsViewModel()
+  @ObservedObject private var appSettings = ObservableAppSettings()
 
   var body: some View {
     NavigationView {
       VStack {
         ScrollableTextView(
           text: HintModel.mock.text,
-          speed: $viewModel.speed,
-          fontSize: $viewModel.fontSize
+          speed: $appSettings.textViewSpeed,
+          fontSize: $appSettings.textViewFontSize
         )
           .padding(.horizontal)
 
         VStack {
-          makeSpeedSlider($viewModel.speed)
-          makeFontSizeSlider($viewModel.fontSize)
+          makeSpeedSlider($appSettings.textViewSpeed)
+          makeFontSizeSlider($appSettings.textViewFontSize)
         }
         .padding()
         .background(Color.black.opacity(0.05))
@@ -62,7 +62,7 @@ struct SettingsView: View {
 
       Slider(
         value: value,
-        in: .init(uncheckedBounds: (lower: 0, upper: 1))
+        in: .init(uncheckedBounds: (lower: 10, upper: 30))
       )
 
       Text("A")

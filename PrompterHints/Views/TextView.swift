@@ -18,7 +18,7 @@ struct TextView: UIViewRepresentable {
 
     func textViewDidChange(_ textView: UITextView) {
       text.wrappedValue = textView.text
-      textView.setAttributedString(titleFontSize: 22, textFontSize: 18)
+      textView.setAttributedString(textFontSize: AppSettings.textViewFontSize)
     }
   }
 
@@ -36,7 +36,7 @@ struct TextView: UIViewRepresentable {
 
   func updateUIView(_ uiView: UITextView, context: Context) {
     uiView.text = text
-    uiView.setAttributedString(titleFontSize: 22, textFontSize: 18)
+    uiView.setAttributedString(textFontSize: AppSettings.textViewFontSize)
   }
 
   func makeCoordinator() -> Coordinator {
