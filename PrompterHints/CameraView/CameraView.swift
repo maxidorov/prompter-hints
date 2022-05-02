@@ -10,7 +10,7 @@ import SwiftUI
 struct CameraView: View {
   var body: some View {
     ZStack {
-      Color.blue // CameraView
+      CameraViewController()
         .ignoresSafeArea()
 
       VStack {

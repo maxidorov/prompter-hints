@@ -34,6 +34,7 @@
 		72A4814A28198333009A5435 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4814928198333009A5435 /* ListView.swift */; };
 		72A4814C28198334009A5435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814B28198334009A5435 /* Assets.xcassets */; };
 		72A4814F28198334009A5435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A4814E28198334009A5435 /* Preview Assets.xcassets */; };
+		72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA01F128200BB000F67DAA /* CameraViewController.swift */; };
 		72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C2281E6C3C000389B3 /* Date+Extension.swift */; };
 		72C658C6281E7187000389B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658C5281E7187000389B3 /* SettingsView.swift */; };
 		72C658CD281E8D57000389B3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C658CC281E8D57000389B3 /* SettingsViewModel.swift */; };
@@ -71,6 +72,7 @@
 		72A4814928198333009A5435 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72A4814B28198334009A5435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A4814E28198334009A5435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72AA01F128200BB000F67DAA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		72C658C2281E6C3C000389B3 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		72C658C5281E7187000389B3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		72C658CC281E8D57000389B3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				7228BF83281C4D440067378C /* CameraFooterView.swift */,
 				7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */,
 				72D97782281C369600C1D280 /* CameraRecordButtonView.swift */,
+				72AA01F128200BB000F67DAA /* CameraViewController.swift */,
 			);
 			path = CameraView;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */,
 				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
 				7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */,
+				72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,
 				72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */,
 				72D97783281C369600C1D280 /* CameraRecordButtonView.swift in Sources */,
