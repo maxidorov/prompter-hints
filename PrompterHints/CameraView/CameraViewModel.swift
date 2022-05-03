@@ -68,6 +68,10 @@ final class CameraViewModel: ObservableObject {
       }
     }
   }
+
+  func stopSession() {
+    cameraManager.stopCaptureSession()
+  }
 }
 
 extension CameraDevice {

@@ -68,7 +68,7 @@
 		72A129E32819D26400E0DA0A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		72A129E82819D6ED00E0DA0A /* PersistentManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManaging.swift; sourceTree = "<group>"; };
 		72A129EA2819DFFE00E0DA0A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		72A4814428198333009A5435 /* Prompter Hints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prompter Hints.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A4814428198333009A5435 /* PrompterHints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrompterHints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A4814728198333009A5435 /* PrompterHintsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterHintsApp.swift; sourceTree = "<group>"; };
 		72A4814928198333009A5435 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72A4814B28198334009A5435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		72A4814528198333009A5435 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72A4814428198333009A5435 /* Prompter Hints.app */,
+				72A4814428198333009A5435 /* PrompterHints.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 				72AA01F428200C6A00F67DAA /* CameraManager */,
 			);
 			productName = PrompterHints;
-			productReference = 72A4814428198333009A5435 /* Prompter Hints.app */;
+			productReference = 72A4814428198333009A5435 /* PrompterHints.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -532,16 +532,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"PrompterHints/Preview Content\"";
 				DEVELOPMENT_TEAM = FABNM4L4H4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PrompterHints is going to use Camera ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "PrompterHints is going use your localtion info";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PrompterHints is going to use Mircophone";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PrompterHints is going to save video to your Gallery";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PrompterHints is going to save video to your Gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -554,9 +556,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.PrompterHints;
-				PRODUCT_NAME = "Prompter Hints";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaksimSidorov.PrompterHints;
+				PRODUCT_NAME = PrompterHints;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -569,16 +572,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"PrompterHints/Preview Content\"";
 				DEVELOPMENT_TEAM = FABNM4L4H4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PrompterHints is going to use Camera ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "PrompterHints is going use your localtion info";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PrompterHints is going to use Mircophone";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PrompterHints is going to save video to your Gallery";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PrompterHints is going to save video to your Gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -591,9 +596,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.PrompterHints;
-				PRODUCT_NAME = "Prompter Hints";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaksimSidorov.PrompterHints;
+				PRODUCT_NAME = PrompterHints;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

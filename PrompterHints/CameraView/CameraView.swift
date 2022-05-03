@@ -43,6 +43,7 @@ struct CameraView: View {
         },
       alignment: .topTrailing
     )
+    .onDisappear(perform: viewModel.stopSession)
   }
 }
 
