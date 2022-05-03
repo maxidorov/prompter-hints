@@ -42,7 +42,7 @@ final class HintsStore: ObservableObject {
 extension HintsStore {
   static let mock: HintsStore = {
     let store = HintsStore(persistentManager: UserDefaultsManager())
-    (0...9).map { index in
+    (0...9).forEach { index in
       store.hints.append(.init(id: index, text: "\(index)", date: Date()))
     }
     return store

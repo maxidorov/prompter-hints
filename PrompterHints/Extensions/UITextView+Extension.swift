@@ -20,7 +20,7 @@ extension UITextView {
     attributedString.addAttributes(
       [
         .foregroundColor : UIColor.black,
-        .font: Brandbook.font(size: titleFontSize, weight: .bold)
+        .font: UIFont.systemFont(ofSize: titleFontSize, weight: .bold)
       ],
       range: NSRange(location: 0, length: titleLength)
     )
@@ -29,7 +29,7 @@ extension UITextView {
       attributedString.addAttributes(
         [
           .foregroundColor : UIColor.black,
-          .font: Brandbook.font(size: textFontSize, weight: .demiBold)
+          .font: UIFont.systemFont(ofSize: textFontSize, weight: .semibold)
         ],
         range: NSRange(location: titleLength, length: text.count - titleLength)
       )
