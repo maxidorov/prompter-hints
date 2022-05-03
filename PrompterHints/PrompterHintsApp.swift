@@ -23,7 +23,11 @@ struct PrompterHintsApp: App {
       case .cameraView:
         CameraView(
           presented: .constant(true),
-          viewModel: CameraViewModel(text: HintModel.mock.text)
+          viewModel: CameraViewModel(
+            text: HintModel.mock.text,
+            speed: AppSettings.textViewSpeed,
+            fontSize: AppSettings.textViewFontSize
+          )
         )
       case .settings:
         SettingsView(presented: .constant(true))

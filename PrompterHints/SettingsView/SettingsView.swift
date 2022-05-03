@@ -17,7 +17,8 @@ struct SettingsView: View {
         ScrollableTextView(
           text: HintModel.mock.text,
           speed: $appSettings.textViewSpeed,
-          fontSize: $appSettings.textViewFontSize
+          fontSize: $appSettings.textViewFontSize,
+          isScrolling: .constant(true)
         )
           .padding(.horizontal)
 

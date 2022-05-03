@@ -31,7 +31,11 @@ struct EditHintView: View {
         content: {
           CameraView(
             presented: $cameraViewPresented,
-            viewModel: CameraViewModel(text: viewModel.text)
+            viewModel: CameraViewModel(
+              text: viewModel.text,
+              speed: AppSettings.textViewSpeed,
+              fontSize: AppSettings.textViewFontSize
+            )
           )
         }
       )

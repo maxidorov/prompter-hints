@@ -13,7 +13,13 @@ import SwiftUI
 
 final class CameraViewModel: ObservableObject {
   var text: String
+  var speed: CGFloat
+  var fontSize: CGFloat
+
   @Published var isRecording = false
+  @Published var cameraDevice: CameraDevice = .back
+
+  private var cancellable: AnyCancellable?
 
   let cameraManager: CameraManager = {
     let cm = CameraManager()
@@ -21,8 +27,18 @@ final class CameraViewModel: ObservableObject {
     return cm
   }()
 
-  init(text: String) {
+  init(
+    text: String,
+    speed: CGFloat,
+    fontSize: CGFloat
+  ) {
     self.text = text
+    self.speed = speed
+    self.fontSize = fontSize
+
+    self.cancellable = $cameraDevice.sink { [weak self] cameraDevice in
+      self?.cameraManager.cameraDevice = cameraDevice
+    }
   }
 
   func startRecording() {
@@ -43,15 +59,28 @@ final class CameraViewModel: ObservableObject {
         return
       }
 
-      PHPhotoLibrary.shared().performChanges({
-          PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: videoURL)
-      }) { saved, _ in
-        print(saved ? "saved" : "not saved")
+      PHPhotoLibrary.shared().performChanges {
+        // FIXME: save twice
+        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: videoURL)
+      } completionHandler: { saved, error in
+        error.apply { print("Error:", $0) }
+        print("Saved:", saved)
       }
     }
   }
 }
 
+extension CameraDevice {
+  mutating func toggle() {
+    switch self {
+    case .front:
+      self = .back
+    case .back:
+      self = .front
+    }
+  }
+}
+
 extension CameraViewModel {
-  static let mock = CameraViewModel(text: HintModel.mock.text)
+  static let mock = CameraViewModel(text: HintModel.mock.text, speed: 0.5, fontSize: 18)
 }

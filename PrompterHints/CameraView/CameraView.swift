@@ -16,12 +16,21 @@ struct CameraView: View {
       CameraViewController(cameraViewModel: viewModel)
         .ignoresSafeArea()
 
-      ScrollableTextView(
-        text: viewModel.text,
-        speed: .constant(0.5),
-        fontSize: .constant(0.5)
-      )
-        .padding(.horizontal)
+      VStack {
+        ScrollableTextView(
+          text: viewModel.text,
+          speed: .constant(viewModel.speed),
+          fontSize: .constant(viewModel.fontSize),
+          isScrolling: $viewModel.isRecording
+        ).padding()
+
+        CameraFooterView(
+          isRecording: $viewModel.isRecording,
+          startRecordingAction: viewModel.startRecording,
+          stopRecrodingAction: viewModel.stopRecording,
+          toggleCameraDevice: { viewModel.cameraDevice.toggle() }
+        )
+      }
     }
     .overlay(
       Image(systemName: "xmark.circle.fill")
@@ -33,14 +42,6 @@ struct CameraView: View {
           presented = false
         },
       alignment: .topTrailing
-    )
-    .overlay(
-      CameraFooterView(
-        isRecording: $viewModel.isRecording,
-        startRecordingAction: viewModel.startRecording,
-        stopRecrodingAction: viewModel.stopRecording
-      ),
-      alignment: .bottom
     )
   }
 }

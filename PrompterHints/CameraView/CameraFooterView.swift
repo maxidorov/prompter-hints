@@ -11,6 +11,7 @@ struct CameraFooterView: View {
   @Binding var isRecording: Bool
   var startRecordingAction: () -> Void
   var stopRecrodingAction: () -> Void
+  var toggleCameraDevice: () -> Void
 
   var body: some View {
     HStack {
@@ -25,7 +26,7 @@ struct CameraFooterView: View {
         stopRecrodingAction: stopRecrodingAction
       )
         .frame(maxWidth: .infinity)
-      CameraSwitchButtonView()
+      CameraSwitchButtonView(action: toggleCameraDevice)
         .frame(maxWidth: .infinity)
     }
   }
@@ -36,7 +37,8 @@ struct CameraBottomView_Previews: PreviewProvider {
     CameraFooterView(
       isRecording: .constant(false),
       startRecordingAction: {},
-      stopRecrodingAction: {}
+      stopRecrodingAction: {},
+      toggleCameraDevice: {}
     )
       .previewLayout(.sizeThatFits)
   }
