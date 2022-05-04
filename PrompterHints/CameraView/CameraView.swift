@@ -30,6 +30,7 @@ struct CameraView: View {
           stopRecrodingAction: viewModel.stopRecording,
           toggleCameraDevice: { viewModel.cameraDevice.toggle() }
         )
+          .padding(.bottom)
       }
     }
     .overlay(

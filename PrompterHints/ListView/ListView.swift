@@ -43,7 +43,10 @@ struct ListView: View {
         .padding(.bottom, 80)
       }
       .frame(maxWidth: .infinity)
-      .overlay(NewNoteButton(store: store).dropShadow(), alignment: .bottom)
+      .overlay(
+        NewNoteButton(store: store).dropShadow().padding(.bottom),
+        alignment: .bottom
+      )
       .navigationTitle("Hints")
       .toolbar { settingsToolbar }
       .sheet(
