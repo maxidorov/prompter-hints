@@ -51,6 +51,12 @@
 		720384AB283179520039214B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		720384AD28317A4A0039214B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/PrompterHints-InfoPlist.strings"; sourceTree = "<group>"; };
 		720384AF28317A6D0039214B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/PrompterHints-InfoPlist.strings"; sourceTree = "<group>"; };
+		721273B72835765300480D3C /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = "uk.lproj/PrompterHints-InfoPlist.strings"; sourceTree = "<group>"; };
+		721273B82835765300480D3C /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		721273B9283576C500480D3C /* kk-KZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "kk-KZ"; path = "kk-KZ.lproj/PrompterHints-InfoPlist.strings"; sourceTree = "<group>"; };
+		721273BA283576C500480D3C /* kk-KZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "kk-KZ"; path = "kk-KZ.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		721273BB283576EA00480D3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PrompterHints-InfoPlist.strings"; sourceTree = "<group>"; };
+		721273BC283576EA00480D3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7228BF7D281C476D0067378C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSwitchButtonView.swift; sourceTree = "<group>"; };
 		7228BF83281C4D440067378C /* CameraFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFooterView.swift; sourceTree = "<group>"; };
@@ -308,6 +314,9 @@
 				en,
 				Base,
 				ru,
+				uk,
+				"kk-KZ",
+				"zh-Hans",
 			);
 			mainGroup = 72A4813B28198333009A5435;
 			packageReferences = (
@@ -426,6 +435,9 @@
 			children = (
 				720384AD28317A4A0039214B /* ru */,
 				720384AF28317A6D0039214B /* en */,
+				721273B72835765300480D3C /* uk */,
+				721273B9283576C500480D3C /* kk-KZ */,
+				721273BB283576EA00480D3C /* zh-Hans */,
 			);
 			name = "PrompterHints-InfoPlist.strings";
 			sourceTree = "<group>";
@@ -435,6 +447,9 @@
 			children = (
 				72A3FD142831768A00F0081C /* ru */,
 				720384AB283179520039214B /* en */,
+				721273B82835765300480D3C /* uk */,
+				721273BA283576C500480D3C /* kk-KZ */,
+				721273BC283576EA00480D3C /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

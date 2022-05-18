@@ -1,0 +1,15 @@
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "PrompterHints 正在使用摄像头让您录制视频";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "PrompterHints 正在使用您的位置来让您保存录制视频的位置";
+
+/* Privacy - Microphone Usage Description */
+"NSMicrophoneUsageDescription" = "PrompterHints 正在使用麦克风使您能够录制有声视频";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "PrompterHints 正在使用照片库来让您保存录制的视频";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "PrompterHints 会将视频保存到您的图库";
+

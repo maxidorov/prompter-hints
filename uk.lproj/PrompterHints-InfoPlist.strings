@@ -1,0 +1,15 @@
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "PrompterHints використовує камеру для запису відео";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "PrompterHints використовує ваше місцезнаходження, щоб дозволити вам зберігати місцезнаходження записаних відео";
+
+/* Privacy - Microphone Usage Description */
+"NSMicrophoneUsageDescription" = "PrompterHints використовує мікрофон, щоб ви могли записувати відео зі звуком";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "PrompterHints використовує бібліотеку фотографій, щоб ви могли зберігати записані відео";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "PrompterHints збирається зберегти відео у вашій галереї";
+
