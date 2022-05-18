@@ -49,6 +49,8 @@ struct ListView: View {
       )
       .navigationTitle("Hints")
       .toolbar { settingsToolbar }
+      .onAppear { AnalyticsManager.shared.log(.listScreenOpened) }
+      .onDisappear { AnalyticsManager.shared.log(.listScreenClosed) }
       .sheet(
         isPresented: $settingsViewPresented,
         onDismiss: { settingsViewPresented = false },

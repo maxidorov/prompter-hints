@@ -46,6 +46,7 @@ final class CameraViewModel: ObservableObject {
     withAnimation {
       isRecording = true
     }
+    AnalyticsManager.shared.log(.videoStartRecording)
   }
 
   func stopRecording() {
@@ -66,6 +67,8 @@ final class CameraViewModel: ObservableObject {
         error.apply { print("Error:", $0) }
         print("Saved:", saved)
       }
+
+      AnalyticsManager.shared.log(.videoStopRecording)
     }
   }
 

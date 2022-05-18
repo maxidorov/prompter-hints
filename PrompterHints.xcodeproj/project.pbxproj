@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F6B9D881F67BBB2F5F4FB9 /* Pods_PrompterHints.framework */; };
 		720384AE28317A4A0039214B /* PrompterHints-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 720384AC28317A4A0039214B /* PrompterHints-InfoPlist.strings */; };
+		721273C12835819000480D3C /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; productRef = 721273C02835819000480D3C /* YandexMobileMetrica */; };
+		721273C32835819000480D3C /* YandexMobileMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 721273C22835819000480D3C /* YandexMobileMetricaCrashes */; };
+		721273C6283582B900480D3C /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721273C5283582B900480D3C /* AnalyticsEvent.swift */; };
+		721273C8283582CC00480D3C /* AnalyticsEventLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721273C7283582CC00480D3C /* AnalyticsEventLogging.swift */; };
+		721273CA283582DB00480D3C /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721273C9283582DB00480D3C /* AnalyticsManager.swift */; };
+		721273CC2835830A00480D3C /* YandexMetricaLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721273CB2835830A00480D3C /* YandexMetricaLogger.swift */; };
 		7228BF7E281C476D0067378C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF7D281C476D0067378C /* CameraView.swift */; };
 		7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */; };
 		7228BF84281C4D440067378C /* CameraFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BF83281C4D440067378C /* CameraFooterView.swift */; };
@@ -57,6 +63,10 @@
 		721273BA283576C500480D3C /* kk-KZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "kk-KZ"; path = "kk-KZ.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		721273BB283576EA00480D3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PrompterHints-InfoPlist.strings"; sourceTree = "<group>"; };
 		721273BC283576EA00480D3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		721273C5283582B900480D3C /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		721273C7283582CC00480D3C /* AnalyticsEventLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventLogging.swift; sourceTree = "<group>"; };
+		721273C9283582DB00480D3C /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		721273CB2835830A00480D3C /* YandexMetricaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMetricaLogger.swift; sourceTree = "<group>"; };
 		7228BF7D281C476D0067378C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		7228BF81281C4A900067378C /* CameraSwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSwitchButtonView.swift; sourceTree = "<group>"; };
 		7228BF83281C4D440067378C /* CameraFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFooterView.swift; sourceTree = "<group>"; };
@@ -101,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				721273C12835819000480D3C /* YandexMobileMetrica in Frameworks */,
+				721273C32835819000480D3C /* YandexMobileMetricaCrashes in Frameworks */,
 				2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */,
 				72AA01F528200C6A00F67DAA /* CameraManager in Frameworks */,
 			);
@@ -109,6 +121,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721273C4283582A800480D3C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				721273C5283582B900480D3C /* AnalyticsEvent.swift */,
+				721273C7283582CC00480D3C /* AnalyticsEventLogging.swift */,
+				721273C9283582DB00480D3C /* AnalyticsManager.swift */,
+				721273CB2835830A00480D3C /* YandexMetricaLogger.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		7228BF7C281C47600067378C /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +225,7 @@
 				72A129D928199F2300E0DA0A /* AppSettings.swift */,
 				72A129BF28198BCE00E0DA0A /* HintsStore.swift */,
 				72A129C82819905F00E0DA0A /* Extensions */,
+				721273C4283582A800480D3C /* Analytics */,
 				72D97781281C368B00C1D280 /* Views */,
 				72A129E72819D6DB00E0DA0A /* Persistent */,
 				72A129CB281991DD00E0DA0A /* Models */,
@@ -286,6 +310,8 @@
 			name = PrompterHints;
 			packageProductDependencies = (
 				72AA01F428200C6A00F67DAA /* CameraManager */,
+				721273C02835819000480D3C /* YandexMobileMetrica */,
+				721273C22835819000480D3C /* YandexMobileMetricaCrashes */,
 			);
 			productName = PrompterHints;
 			productReference = 72A4814428198333009A5435 /* PrompterHints.app */;
@@ -321,6 +347,7 @@
 			mainGroup = 72A4813B28198333009A5435;
 			packageReferences = (
 				72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */,
+				721273BF2835819000480D3C /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */,
 			);
 			productRefGroup = 72A4814528198333009A5435 /* Products */;
 			projectDirPath = "";
@@ -401,10 +428,12 @@
 				7262C687281B19C100F4FB03 /* NewHintView.swift in Sources */,
 				72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */,
 				72A129EB2819DFFE00E0DA0A /* UserDefaultsManager.swift in Sources */,
+				721273C8283582CC00480D3C /* AnalyticsEventLogging.swift in Sources */,
 				72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */,
 				72C658C3281E6C3C000389B3 /* Date+Extension.swift in Sources */,
 				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
 				7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */,
+				721273CC2835830A00480D3C /* YandexMetricaLogger.swift in Sources */,
 				72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,
 				72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */,
@@ -423,6 +452,8 @@
 				72A129C028198BCE00E0DA0A /* HintsStore.swift in Sources */,
 				7262C689281B1EA000F4FB03 /* NewHintViewModel.swift in Sources */,
 				72A129D428199C4E00E0DA0A /* TextView.swift in Sources */,
+				721273CA283582DB00480D3C /* AnalyticsManager.swift in Sources */,
+				721273C6283582B900480D3C /* AnalyticsEvent.swift in Sources */,
 				72A129E22819D1C000E0DA0A /* ListViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,6 +710,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		721273BF2835819000480D3C /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yandexmobile/metrica-sdk-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/imaginary-cloud/CameraManager";
@@ -690,6 +729,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		721273C02835819000480D3C /* YandexMobileMetrica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 721273BF2835819000480D3C /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetrica;
+		};
+		721273C22835819000480D3C /* YandexMobileMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 721273BF2835819000480D3C /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetricaCrashes;
+		};
 		72AA01F428200C6A00F67DAA /* CameraManager */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */;

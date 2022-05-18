@@ -25,7 +25,13 @@ struct NewHintView: View {
           Image(systemName: "camera")
         }
       }
-      .onAppear(perform: viewModel.reset)
+      .onAppear {
+        viewModel.reset()
+        AnalyticsManager.shared.log(.newHintScreenOpened)
+      }
+      .onDisappear {
+        AnalyticsManager.shared.log(.newHintScrennClosed)
+      }
       .fullScreenCover(
         isPresented: $cameraViewPresented,
         onDismiss: { cameraViewPresented = false },

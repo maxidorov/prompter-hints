@@ -40,6 +40,8 @@ struct SettingsView: View {
           Image(systemName: "xmark.circle")
         }
       }
+      .onAppear { AnalyticsManager.shared.log(.settingsScreenOpened) }
+      .onDisappear { AnalyticsManager.shared.log(.settingsScreenClosed) }
     }
   }
 

@@ -44,7 +44,13 @@ struct CameraView: View {
         },
       alignment: .topTrailing
     )
-    .onDisappear(perform: viewModel.stopSession)
+    .onAppear {
+      AnalyticsManager.shared.log(.cameraScreenOpened)
+    }
+    .onDisappear {
+      viewModel.stopSession()
+      AnalyticsManager.shared.log(.cameraScreenClosed)
+    }
   }
 }
 

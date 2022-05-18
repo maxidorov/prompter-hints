@@ -9,6 +9,15 @@
           "revision": "660d7b8326f43ab1721620cd4729b3928c8a767b",
           "version": null
         }
+      },
+      {
+        "package": "YandexMobileMetrica",
+        "repositoryURL": "https://github.com/yandexmobile/metrica-sdk-ios",
+        "state": {
+          "branch": "master",
+          "revision": "3994299f8b07efd44a973aff407527ccfa0fa35d",
+          "version": null
+        }
       }
     ]
   },

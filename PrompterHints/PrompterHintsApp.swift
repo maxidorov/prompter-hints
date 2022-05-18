@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import YandexMobileMetrica
+import YandexMobileMetricaCrashes
 
 @main
 struct PrompterHintsApp: App {
   private let persitentManager: PersistentManaging = UserDefaultsManager()
 
   init() {
-    UIView.appearance().tintColor = .black
+    configureAppearance()
+    configureYandexMertrica()
+    logAppLauched()
   }
 
   var body: some Scene {
@@ -34,6 +38,21 @@ struct PrompterHintsApp: App {
       }
     }
   }
+}
+
+private func configureAppearance() {
+  UIView.appearance().tintColor = .black
+}
+
+private func configureYandexMertrica() {
+  let apiKey = "ed336c43-d873-4cc6-a789-2feff13bf349"
+  if let configuration = YMMYandexMetricaConfiguration(apiKey: apiKey) {
+    YMMYandexMetrica.activate(with: configuration)
+  }
+}
+
+private func logAppLauched() {
+  AnalyticsManager.shared.log(.appLaunched)
 }
 
 enum AppMode {

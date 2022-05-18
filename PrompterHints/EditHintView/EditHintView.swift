@@ -25,6 +25,8 @@ struct EditHintView: View {
           Image(systemName: "camera")
         }
       }
+      .onAppear { AnalyticsManager.shared.log(.editHintScreenOpened) }
+      .onDisappear { AnalyticsManager.shared.log(.editHintScreenClosed) }
       .fullScreenCover(
         isPresented: $cameraViewPresented,
         onDismiss: { cameraViewPresented = false },
