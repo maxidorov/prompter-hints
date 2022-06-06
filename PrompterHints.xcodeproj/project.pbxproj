@@ -50,6 +50,7 @@
 		72D9777E281C2D7200C1D280 /* EditHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777D281C2D7200C1D280 /* EditHintView.swift */; };
 		72D97780281C2DB200C1D280 /* EditHintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9777F281C2DB200C1D280 /* EditHintViewModel.swift */; };
 		72D97783281C369600C1D280 /* CameraRecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D97782281C369600C1D280 /* CameraRecordButtonView.swift */; };
+		72E627D7284EC98D00CEDC3A /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 72E627D6284EC98D00CEDC3A /* ApphudSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 			files = (
 				721273C12835819000480D3C /* YandexMobileMetrica in Frameworks */,
 				721273C32835819000480D3C /* YandexMobileMetricaCrashes in Frameworks */,
+				72E627D7284EC98D00CEDC3A /* ApphudSDK in Frameworks */,
 				2597697A4A7775024DC4AAA0 /* Pods_PrompterHints.framework in Frameworks */,
 				72AA01F528200C6A00F67DAA /* CameraManager in Frameworks */,
 			);
@@ -312,6 +314,7 @@
 				72AA01F428200C6A00F67DAA /* CameraManager */,
 				721273C02835819000480D3C /* YandexMobileMetrica */,
 				721273C22835819000480D3C /* YandexMobileMetricaCrashes */,
+				72E627D6284EC98D00CEDC3A /* ApphudSDK */,
 			);
 			productName = PrompterHints;
 			productReference = 72A4814428198333009A5435 /* PrompterHints.app */;
@@ -348,6 +351,7 @@
 			packageReferences = (
 				72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */,
 				721273BF2835819000480D3C /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */,
+				72E627D5284EC98D00CEDC3A /* XCRemoteSwiftPackageReference "ApphudSDK" */,
 			);
 			productRefGroup = 72A4814528198333009A5435 /* Products */;
 			projectDirPath = "";
@@ -726,6 +730,14 @@
 				kind = branch;
 			};
 		};
+		72E627D5284EC98D00CEDC3A /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -743,6 +755,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 72AA01F328200C6A00F67DAA /* XCRemoteSwiftPackageReference "CameraManager" */;
 			productName = CameraManager;
+		};
+		72E627D6284EC98D00CEDC3A /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72E627D5284EC98D00CEDC3A /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

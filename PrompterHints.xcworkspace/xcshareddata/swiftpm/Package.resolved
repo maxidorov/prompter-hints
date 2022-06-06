@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ApphudSDK",
+        "repositoryURL": "https://github.com/apphud/ApphudSDK",
+        "state": {
+          "branch": null,
+          "revision": "8a8e345ff7c31ef8221b93bd9814e3381fd5654e",
+          "version": "2.8.1"
+        }
+      },
+      {
         "package": "CameraManager",
         "repositoryURL": "https://github.com/imaginary-cloud/CameraManager",
         "state": {
