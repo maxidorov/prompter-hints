@@ -30,7 +30,7 @@ struct NewHintView: View {
         AnalyticsManager.shared.log(.newHintScreenOpened)
       }
       .onDisappear {
-        AnalyticsManager.shared.log(.newHintScrennClosed)
+        AnalyticsManager.shared.log(.newHintScreenClosed)
       }
       .fullScreenCover(
         isPresented: $cameraViewPresented,

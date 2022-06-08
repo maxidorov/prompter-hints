@@ -8,22 +8,27 @@
 import SwiftUI
 import YandexMobileMetrica
 import YandexMobileMetricaCrashes
+import ApphudSDK
 
 @main
 struct PrompterHintsApp: App {
-  private let persitentManager: PersistentManaging = UserDefaultsManager()
+  private let persistentManager: PersistentManaging = UserDefaultsManager()
+  private let subscriptionViewModel = SubscriptionViewModel()
 
   init() {
     configureAppearance()
-    configureYandexMertrica()
-    logAppLauched()
+    configureYandexMetrica()
+    configureApphud()
   }
 
   var body: some Scene {
     WindowGroup {
       switch appMode {
       case .prod:
-        ListView(store: .init(persistentManager: persitentManager))
+        AppContainerView(deps: .init(
+          persistentManager: persistentManager,
+          subscriptionViewModel: subscriptionViewModel
+        ))
       case .cameraView:
         CameraView(
           presented: .constant(true),
@@ -35,30 +40,35 @@ struct PrompterHintsApp: App {
         )
       case .settings:
         SettingsView(presented: .constant(true))
+      case .paywall:
+        SubscriptionView(
+          viewModel: subscriptionViewModel,
+          showSubscriptionView: .constant(true)
+        )
       }
     }
   }
 }
 
 private func configureAppearance() {
-  UIView.appearance().tintColor = .black
+  UIView.appearance().tintColor = UIColor(hex: Brand.colorHex)
 }
 
-private func configureYandexMertrica() {
-  let apiKey = "ed336c43-d873-4cc6-a789-2feff13bf349"
-  if let configuration = YMMYandexMetricaConfiguration(apiKey: apiKey) {
+private func configureYandexMetrica() {
+  if let configuration = YMMYandexMetricaConfiguration(apiKey: ApiKeys.yandexAppMetrica) {
     YMMYandexMetrica.activate(with: configuration)
   }
 }
 
-private func logAppLauched() {
-  AnalyticsManager.shared.log(.appLaunched)
+private func configureApphud() {
+  Apphud.start(apiKey: ApiKeys.apphud)
 }
 
 enum AppMode {
   case prod
   case cameraView
   case settings
+  case paywall
 }
 
 private let appMode: AppMode = .prod
