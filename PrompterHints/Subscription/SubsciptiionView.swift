@@ -24,13 +24,14 @@ struct SubscriptionView: View {
 
   private var header: some View {
     VStack(spacing: 16) {
-      Text("PREMUIM")
+      Text("PREMIUM")
         .font(.system(size: 12))
         .fontWeight(.bold)
 
       Text("Get Unlimited Functionality")
         .font(.system(size: 26))
         .fontWeight(.bold)
+        .multilineTextAlignment(.center)
     }
     .foregroundColor(Color(hex: Brand.colorHex))
   }
@@ -56,8 +57,10 @@ struct SubscriptionView: View {
           .frame(width: 40)
 
         Text("Unlimited quantity of notes")
-          .font(.system(size: 20))
+          .font(.system(size: 16))
           .fontWeight(.medium)
+          .lineLimit(1)
+          .minimumScaleFactor(0.5)
       }
       HStack {
         Text("⏰")
@@ -65,8 +68,10 @@ struct SubscriptionView: View {
           .frame(width: 40)
 
         Text("Unlimited time of recording")
-          .font(.system(size: 20))
           .fontWeight(.medium)
+          .font(.system(size: 16))
+          .lineLimit(1)
+          .minimumScaleFactor(0.5)
       }
     }
   }

@@ -6,8 +6,15 @@
 //
 
 import StoreKit
+import SwiftUI
 
 extension SKProduct {
+  struct LocalizedPeriods {
+    static let day: String = "day"
+    static let week: String = "week"
+    static let month: String = "month"
+    static let year: String = "year"
+  }
   private static let formatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
@@ -18,13 +25,13 @@ extension SKProduct {
     let primaryPeriod: String = {
       switch self.subscriptionPeriod?.unit {
       case .day:
-        return "day"
+        return LocalizedPeriods.day
       case .week:
-        return "week"
+        return LocalizedPeriods.week
       case .month:
-        return "month"
+        return LocalizedPeriods.month
       case .year:
-        return "year"
+        return LocalizedPeriods.year
       case .none, .some:
         return ""
       }
@@ -33,15 +40,15 @@ extension SKProduct {
     func getRealNumberOfUnitsAndPeriod() -> (Int, String) {
       let numberOfUnits = subscriptionPeriod?.numberOfUnits ?? 0
       if numberOfUnits == 7 && primaryPeriod == "day" {
-        return (1, "week")
+        return (1, .localizedString(for: "week", locale: .current))
       }
       return (numberOfUnits, primaryPeriod)
     }
 
     let (numberOfUnits, period) = getRealNumberOfUnitsAndPeriod()
-    let pluralPeriod = numberOfUnits > 1 ? "\(period)s" : period
     let stringNumberOfUnits = (numberOfUnits == 1) ? "" : "\(numberOfUnits) "
-    return "\(localizedPrice!) per \(stringNumberOfUnits)\(pluralPeriod)"
+    let localizedPeriodPrefix: String = .localizedString(for: "per", locale: .current)
+    return "\(localizedPrice!) \(localizedPeriodPrefix) \(stringNumberOfUnits)\(period)"
   }
 
   private var localizedPrice: String? {
@@ -77,5 +84,20 @@ extension SKProductDiscount {
     formatter.locale = locale
     formatter.numberStyle = .currency
     return formatter
+  }
+}
+
+extension String {
+  static func localizedString(
+    for key: String,
+    locale: Locale = .current
+  ) -> String {
+
+    let language = locale.languageCode
+    let path = Bundle.main.path(forResource: language, ofType: "lproj")!
+    let bundle = Bundle(path: path)!
+    let localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
+
+    return localizedString
   }
 }
