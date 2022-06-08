@@ -6,5 +6,5 @@
 //
 
 enum Brand {
-  static let colorHex: UInt = 0x44009A
+  static let colorHex: UInt = 0x0053D0
 }

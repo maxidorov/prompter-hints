@@ -20,7 +20,7 @@ struct NewHintButton: View {
     ) {
       Text("New Hint")
         .fontWeight(.medium)
-        .foregroundColor(.black.opacity(0.8))
+        .foregroundColor(Color(hex: Brand.colorHex))
         .padding(.s4)
         .background(Color.white)
         .clipShape(Capsule())
