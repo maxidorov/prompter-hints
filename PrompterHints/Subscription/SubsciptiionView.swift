@@ -13,6 +13,15 @@ struct SubscriptionView: View {
   @ObservedObject var viewModel: SubscriptionViewModel
   @Binding var showSubscriptionView: Bool
 
+  private var closeButton: some View {
+    HStack {
+      Image(systemName: "xmark").asButton {
+        showSubscriptionView = false
+      }.opacity(0.3)
+      Spacer()
+    }
+  }
+
   private var header: some View {
     VStack(spacing: 16) {
       Text("PREMUIM")
@@ -20,7 +29,7 @@ struct SubscriptionView: View {
         .fontWeight(.bold)
 
       Text("Get Unlimited Functionality")
-        .font(.system(size: 22))
+        .font(.system(size: 26))
         .fontWeight(.bold)
     }
     .foregroundColor(Color(hex: Brand.colorHex))
@@ -137,6 +146,7 @@ struct SubscriptionView: View {
 
   var body: some View {
     VStack(spacing: 16) {
+      closeButton
       header
       Spacer()
       icon
@@ -148,6 +158,7 @@ struct SubscriptionView: View {
     }
     .padding([.leading, .top, .trailing])
     .onAppear(perform: viewModel.fetchPaywalls)
+    .allowAutoDismiss(false)
   }
 }
 
