@@ -26,7 +26,6 @@
 		729E0C92285014F900F8AEC4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729E0C91285014F900F8AEC4 /* Utils.swift */; };
 		729E0C942850199D00F8AEC4 /* SKProduct+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729E0C932850199D00F8AEC4 /* SKProduct+Extension.swift */; };
 		729E0C962850A0AA00F8AEC4 /* Brandbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729E0C952850A0AA00F8AEC4 /* Brandbook.swift */; };
-		729E0C982850A86100F8AEC4 /* AllowAutoDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729E0C972850A86100F8AEC4 /* AllowAutoDismissModifier.swift */; };
 		72A129C028198BCE00E0DA0A /* HintsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129BF28198BCE00E0DA0A /* HintsStore.swift */; };
 		72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129C228198D3300E0DA0A /* ListViewCell.swift */; };
 		72A129C528198D9A00E0DA0A /* HintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129C428198D9A00E0DA0A /* HintModel.swift */; };
@@ -87,7 +86,6 @@
 		729E0C91285014F900F8AEC4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		729E0C932850199D00F8AEC4 /* SKProduct+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct+Extension.swift"; sourceTree = "<group>"; };
 		729E0C952850A0AA00F8AEC4 /* Brandbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brandbook.swift; sourceTree = "<group>"; };
-		729E0C972850A86100F8AEC4 /* AllowAutoDismissModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowAutoDismissModifier.swift; sourceTree = "<group>"; };
 		72A129BF28198BCE00E0DA0A /* HintsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsStore.swift; sourceTree = "<group>"; };
 		72A129C228198D3300E0DA0A /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		72A129C428198D9A00E0DA0A /* HintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintModel.swift; sourceTree = "<group>"; };
@@ -247,7 +245,6 @@
 				72A129D928199F2300E0DA0A /* AppSettings.swift */,
 				72A129BF28198BCE00E0DA0A /* HintsStore.swift */,
 				729E0C91285014F900F8AEC4 /* Utils.swift */,
-				729E0C972850A86100F8AEC4 /* AllowAutoDismissModifier.swift */,
 				72A129C82819905F00E0DA0A /* Extensions */,
 				72E627D8284F75D100CEDC3A /* Subscription */,
 				721273C4283582A800480D3C /* Analytics */,
@@ -473,7 +470,6 @@
 				72E627DE284F7B6100CEDC3A /* SubscriptionViewModel.swift in Sources */,
 				72A129C328198D3300E0DA0A /* ListViewCell.swift in Sources */,
 				7228BF82281C4A900067378C /* CameraSwitchButtonView.swift in Sources */,
-				729E0C982850A86100F8AEC4 /* AllowAutoDismissModifier.swift in Sources */,
 				721273CC2835830A00480D3C /* YandexMetricaLogger.swift in Sources */,
 				72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,

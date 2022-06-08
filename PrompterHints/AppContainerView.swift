@@ -14,7 +14,7 @@ struct AppContainerView: View {
     var subscriptionViewModel: SubscriptionViewModel
   }
 
-  @State private var showSubscriptionView = true
+  @State private var showSubscriptionView = AppSettings.isFirstLaunch
   private var deps: Deps
 
   private var listView: some View {
@@ -31,11 +31,14 @@ struct AppContainerView: View {
 
   var body: some View {
     listView
-      .sheet(
+      .fullScreenCover(
         isPresented: $showSubscriptionView,
         onDismiss: { showSubscriptionView = false },
         content: { subscriptionView }
       )
+      .onAppear {
+        AppSettings.isFirstLaunch = false
+      }
   }
 
   @ViewBuilder

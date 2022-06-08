@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import ApphudSDK
 import StoreKit
+import SwiftUI
 
 final class SubscriptionViewModel: ObservableObject {
   enum ProductViewState {

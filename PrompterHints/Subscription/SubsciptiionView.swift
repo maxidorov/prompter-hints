@@ -158,7 +158,6 @@ struct SubscriptionView: View {
     }
     .padding([.leading, .top, .trailing])
     .onAppear(perform: viewModel.fetchPaywalls)
-    .allowAutoDismiss(false)
   }
 }
 
