@@ -48,18 +48,24 @@ final class SubscriptionViewModel: ObservableObject {
 
     Apphud.purchase(product) { [weak self] result in
       if let subscription = result.subscription, subscription.isActive() {
-        AnalyticsManager.shared.log(.subscrptionAlreadyActive)
+        AnalyticsManager.shared.log(.subscriptionAlreadyActive)
       } else if let purchase = result.nonRenewingPurchase, purchase.isActive() {
-        AnalyticsManager.shared.log(.subscrptionAlreadyActive)
+        AnalyticsManager.shared.log(.subscriptionAlreadyActive)
       } else {
         if result.error != nil {
-          AnalyticsManager.shared.log(.subscrptionPurchasingFailed)
+          AnalyticsManager.shared.log(.subscriptionPurchasingFailed)
           return
         }
 
-        AnalyticsManager.shared.log(.subscrptionPurchased)
+        AnalyticsManager.shared.log(.subscriptionPurchased)
       }
 
+      self?.showSubscriptionView?.wrappedValue = false
+    }
+  }
+
+  func restorePurchases() {
+    Apphud.restorePurchases { [weak self] _, _, _ in
       self?.showSubscriptionView?.wrappedValue = false
     }
   }

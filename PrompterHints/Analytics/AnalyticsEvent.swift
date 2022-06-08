@@ -30,9 +30,9 @@ enum AnalyticsEvent: String {
   case subscrptionScreenLoaded
   case subscrptionScreenClosed
 
-  case subscrptionAlreadyActive
-  case subscrptionPurchased
-  case subscrptionPurchasingFailed
+  case subscriptionAlreadyActive
+  case subscriptionPurchased
+  case subscriptionPurchasingFailed
 }
 
 extension AnalyticsEvent {

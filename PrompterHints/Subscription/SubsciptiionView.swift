@@ -117,18 +117,19 @@ struct SubscriptionView: View {
           Text("Privacy Policy")
             .privacyStyled(size: size)
             .asButton {
-              URL(string: "").apply {
+              URL(string: "https://maxidorov.github.io/Prompter-privacy-policy/").apply {
                 openURL($0)
               }
             }
 
           Text("Restore")
             .privacyStyled(size: size)
+            .asButton(action: viewModel.restorePurchases)
 
           Text("Terms of use")
             .privacyStyled(size: size)
             .asButton {
-              URL(string: "").apply {
+              URL(string: "https://dimazzziks.github.io/Prompter-terms-of-use/").apply {
                 openURL($0)
               }
             }
