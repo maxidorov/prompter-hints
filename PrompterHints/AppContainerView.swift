@@ -14,11 +14,16 @@ struct AppContainerView: View {
     var subscriptionViewModel: SubscriptionViewModel
   }
 
-  @State private var showSubscriptionView = AppSettings.isFirstLaunch
+  @State private var showSubscriptionView =
+    AppSettings.isFirstLaunch && !SubscriptionViewModel.hasActiveSubscription
+
   private var deps: Deps
 
   private var listView: some View {
-    makeListView(persistentManager: deps.persistentManager)
+    makeListView(
+      showSubscriptionView: $showSubscriptionView,
+      persistentManager: deps.persistentManager
+    )
   }
 
   private var subscriptionView: some View {
@@ -42,13 +47,19 @@ struct AppContainerView: View {
   }
 
   @ViewBuilder
-  func makeListView(persistentManager: PersistentManaging) -> some View {
-    ListView(store: .init(persistentManager: persistentManager))
+  func makeListView(
+    showSubscriptionView: Binding<Bool>,
+    persistentManager: PersistentManaging
+  ) -> some View {
+    ListView(
+      store: .init(persistentManager: persistentManager),
+      showSubscriptionView: showSubscriptionView
+    )
   }
 
-  @ViewBuilder
   func makeSubscriptionView(viewModel: SubscriptionViewModel) -> some View {
-    SubscriptionView(
+    deps.subscriptionViewModel.showSubscriptionView = $showSubscriptionView
+    return SubscriptionView(
       viewModel: deps.subscriptionViewModel,
       showSubscriptionView: $showSubscriptionView
     )

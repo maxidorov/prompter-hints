@@ -97,7 +97,9 @@ struct SubscriptionView: View {
         .padding(.vertical)
         .padding(.horizontal, 32)
         .background(Color(hex: Brand.colorHex))
-        .clipShape(Capsule()))
+        .clipShape(Capsule())
+        .asButton(action: viewModel.purchase)
+      )
     } else {
       return AnyView(ProgressView())
     }

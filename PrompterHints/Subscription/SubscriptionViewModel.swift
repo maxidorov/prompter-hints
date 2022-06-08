@@ -17,11 +17,12 @@ final class SubscriptionViewModel: ObservableObject {
     case loaded(ApphudProduct?)
   }
 
-  @Published var productViewState: ProductViewState = .loading
-
-  var hasActiveSubscription: Bool {
+  static var hasActiveSubscription: Bool {
     Apphud.hasActiveSubscription()
   }
+
+  var showSubscriptionView: Binding<Bool>?
+  @Published var productViewState: ProductViewState = .loading
 
   private var product: ApphudProduct? {
     switch productViewState {
@@ -45,7 +46,7 @@ final class SubscriptionViewModel: ObservableObject {
       return
     }
 
-    Apphud.purchase(product) { result in
+    Apphud.purchase(product) { [weak self] result in
       if let subscription = result.subscription, subscription.isActive() {
         AnalyticsManager.shared.log(.subscrptionAlreadyActive)
       } else if let purchase = result.nonRenewingPurchase, purchase.isActive() {
@@ -58,6 +59,8 @@ final class SubscriptionViewModel: ObservableObject {
 
         AnalyticsManager.shared.log(.subscrptionPurchased)
       }
+
+      self?.showSubscriptionView?.wrappedValue = false
     }
   }
 }

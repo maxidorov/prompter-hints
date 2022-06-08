@@ -35,7 +35,7 @@
 		72A129D628199E6300E0DA0A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D528199E6300E0DA0A /* UITextView+Extension.swift */; };
 		72A129DA28199F2300E0DA0A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129D928199F2300E0DA0A /* AppSettings.swift */; };
 		72A129DC28199F6F00E0DA0A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DB28199F6F00E0DA0A /* Color+Extension.swift */; };
-		72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */; };
+		72A129DE2819C3F500E0DA0A /* NewHintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129DD2819C3F500E0DA0A /* NewHintButton.swift */; };
 		72A129E22819D1C000E0DA0A /* ListViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129E12819D1C000E0DA0A /* ListViewCellModel.swift */; };
 		72A129E42819D26400E0DA0A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129E32819D26400E0DA0A /* String+Extension.swift */; };
 		72A129E92819D6ED00E0DA0A /* PersistentManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A129E82819D6ED00E0DA0A /* PersistentManaging.swift */; };
@@ -95,7 +95,7 @@
 		72A129D528199E6300E0DA0A /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		72A129D928199F2300E0DA0A /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		72A129DB28199F6F00E0DA0A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteButton.swift; sourceTree = "<group>"; };
+		72A129DD2819C3F500E0DA0A /* NewHintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHintButton.swift; sourceTree = "<group>"; };
 		72A129E12819D1C000E0DA0A /* ListViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCellModel.swift; sourceTree = "<group>"; };
 		72A129E32819D26400E0DA0A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		72A129E82819D6ED00E0DA0A /* PersistentManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManaging.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 				72A4814928198333009A5435 /* ListView.swift */,
 				72A129C228198D3300E0DA0A /* ListViewCell.swift */,
 				72A129E12819D1C000E0DA0A /* ListViewCellModel.swift */,
-				72A129DD2819C3F500E0DA0A /* NewNoteButton.swift */,
+				72A129DD2819C3F500E0DA0A /* NewHintButton.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 				721273CC2835830A00480D3C /* YandexMetricaLogger.swift in Sources */,
 				72AA01F228200BB000F67DAA /* CameraViewController.swift in Sources */,
 				72A4814A28198333009A5435 /* ListView.swift in Sources */,
-				72A129DE2819C3F500E0DA0A /* NewNoteButton.swift in Sources */,
+				72A129DE2819C3F500E0DA0A /* NewHintButton.swift in Sources */,
 				72852DD5282130F7001B8D76 /* Optional+Extension.swift in Sources */,
 				72D97783281C369600C1D280 /* CameraRecordButtonView.swift in Sources */,
 				72A129DC28199F6F00E0DA0A /* Color+Extension.swift in Sources */,
