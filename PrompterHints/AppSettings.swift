@@ -27,6 +27,9 @@ struct AppSettings {
 
   @Storage(key: "textViewFontSize", defaultValue: 18.0)
   static var textViewFontSize: CGFloat
+
+  @Storage(key: "isFirstLaunch", defaultValue: true)
+  static var isFirstLaunch: Bool
 }
 
 @propertyWrapper

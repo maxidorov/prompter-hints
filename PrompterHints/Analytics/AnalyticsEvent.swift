@@ -16,7 +16,7 @@ enum AnalyticsEvent: String {
   case settingsScreenClosed
 
   case newHintScreenOpened
-  case newHintScrennClosed
+  case newHintScreenClosed
 
   case editHintScreenOpened
   case editHintScreenClosed
@@ -26,6 +26,13 @@ enum AnalyticsEvent: String {
 
   case videoStartRecording
   case videoStopRecording
+
+  case subscrptionScreenLoaded
+  case subscrptionScreenClosed
+
+  case subscriptionAlreadyActive
+  case subscriptionPurchased
+  case subscriptionPurchasingFailed
 }
 
 extension AnalyticsEvent {

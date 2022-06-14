@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
   @ObservedObject var store: HintsStore
+  @Binding var showSubscriptionView: Bool
   @State var settingsViewPresented = false
 
   private var settingsToolbar: ToolbarItem<Void, Button<Image>> {
@@ -44,7 +45,12 @@ struct ListView: View {
       }
       .frame(maxWidth: .infinity)
       .overlay(
-        NewNoteButton(store: store).dropShadow().padding(.bottom),
+        NewHintButton(
+          showSubscriptionView: $showSubscriptionView,
+          store: store
+        )
+          .dropShadow()
+          .padding(.bottom),
         alignment: .bottom
       )
       .navigationTitle("Hints")
@@ -71,6 +77,6 @@ struct ListView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ListView(store: .mock)
+    ListView(store: .mock, showSubscriptionView: .constant(false))
   }
 }
